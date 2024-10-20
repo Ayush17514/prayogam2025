@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #000;
+    background-color: #fff;
     /*background-image: url('header2.png');  background of mainbody*/
 }
 
@@ -12,10 +12,9 @@ body, html {
     height: 100%;
 }
 
-.header-first { /*logo containner-white*/
+.header-first { /*logo containner-pink*/
     padding: 10px 0;
-    background-color: #000;
-    height:100%;
+    background-color:hsl(322deg 95% 46%);
 }
 
 .logo-container {
@@ -112,9 +111,9 @@ h1 {
 /*overview*/
 h2 {
     font-size: 35px;
-    margin: 0;
+    margin-top: 20px;
     width: 100%;
-    color: #ffca2c ;
+    color:#05488b ;
     text-align: center;
 }
  
@@ -124,6 +123,7 @@ p {
     color: #000;
     width: 100%;
     text-align: left;
+height: auto;
 }
 
 nav {
@@ -132,7 +132,6 @@ nav {
 
 nav ul {
     list-style-type: none;
-    padding: 10;
 }
 
 nav ul li {
@@ -140,7 +139,7 @@ nav ul li {
 }
 
 nav a {
-    color:#b38600;
+    color:#fff;
     text-decoration: none;
 }
 
@@ -150,8 +149,7 @@ nav.visible {
 
 .overview{
     border-radius: 20px;
-    background-color:#fff; 
-    opacity: 20%;
+    padding-left: 20px;
     margin-top: 10%;
 
 }
@@ -178,47 +176,82 @@ nav.visible {
     margin-top: 40px;
 }
 
-
-.carousel {
-    position: relative;
-    margin-top: 5px;
-    overflow: hidden;
-    width: 100%;
-    max-width: 100%;
+* {
+  box-sizing: border-box;
+}
+* {
+  box-sizing: border-box;
 }
 
-.carousel-track {
-    display: flex;
-    transition: transform 0.5s ease;
+.pdf-container {
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap to the next line */
+  justify-content: space-around; /* Spaces the PDF items evenly */
+  gap: 20px; /* Space between PDF items */
+  margin-top: 15%;
 }
 
-.carousel-item {
-    min-width: 50%; /* Default for mobile */
-    box-sizing: border-box;
+.pdf-item {
+  text-align: center;
+  width: 150px;
 }
 
-.carousel img {
-    width: 100%;
-    height: 300px;
-    display: block;
+.pdf-icon {
+  width: 100px; /* Adjust size of the PDF icon */
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s; /* Smooth hover effect */
 }
 
-.carousel-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(255, 255, 255, 0.7);
-    border: none;
-    padding: 10px;
-    cursor: pointer;
+.pdf-icon:hover {
+  transform: scale(1.1); /* Scale up the icon on hover */
 }
 
-.carousel-button.prev {
-    left: 10px;
+.pdf-item p {
+  margin-top: 10px;
+  font-size: 16px;
 }
 
-.carousel-button.next {
-    right: 10px;
+.pdf-item a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.pdf-item a:hover {
+  color: #007bff; /* Change text color on hover */
+}
+
+
+/*grid type gallery*/
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns */
+  gap: 10px; /* Space between images */
+  padding: 10px
+  margin-top:20px;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  object-fit: cover;
+
+}
+/* Make the gallery responsive */
+@media (max-width: 1024px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr); /* Two columns for tablet */
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: 1fr; /* One column for mobile */
+  }
 }
 
 /* Responsive styles */
@@ -248,10 +281,6 @@ body {
 
 /* Responsive design */
 @media (min-width: 600px) {
-
-    .carousel-item {
-        min-width: 100%; /* For desktops */
-    }
     .menu-icon {
         display: none; /* Hide menu icon on larger screens */
     }
