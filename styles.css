@@ -1,26 +1,20 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
     background-color: #fff;
-    /*background-image: url('header2.png');  background of mainbody*/
 }
 
 body, html {
+    height: 100%;
     margin: 0;
     padding: 0;
-    height: 100%;
 }
 
 .header-first { /*logo containner-pink*/
-    padding: 10px 0;
     background-color:hsl(322deg 95% 46%);
 }
 
 .logo-container {
     text-align: left;
-    top: 10px;
-    left: 10px;
 }
 
 .royals-logo {
@@ -31,20 +25,12 @@ body, html {
 .university-logo {
     width: 200px; /* Adjust logo size */
 }
-.event-logo {
-    width: 12%; /* Adjust logo size */
-    height:auto;
-    /*margin-right: 2000px;*/
-    border-right:1px solid black #000;
-    mix-blend-mode: multiply;
-}
+
 .menu-icon {
     font-size: 24px;
     cursor: pointer;
     display: inline-block;
 }
-
-
 
 .landing-page {
     background-image: url('header2.png'); /* Replace with your background image URL */
@@ -54,7 +40,7 @@ body, html {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 90%;
+    height: 100%;
     color: #ffe7eb;
     text-align: center;
     position: relative;
@@ -63,12 +49,17 @@ body, html {
 /*welcome*/
 h3 {
     font-size: 20px;
-    color: white;
+    color: #fff;
     text-align: center;
 }
 h4 {
     font-size: 10px;
-    color: white;
+    color: #fff;
+    text-align: center;
+}
+h5 {
+    font-size: 15px;
+    color: #fff;
     text-align: center;
 }
 
@@ -102,7 +93,7 @@ h1 {
 
 .countdown {
     font-size: 32px;  /* Font size for the countdown */
-    margin-top: 60px; /* Space above the countdown */
+    margin-top: 20px; /* Space above the countdown */
     font-weight: bold; /* Make the text bold */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Optional: add a shadow for better visibility */
     color: #ffffff; /* White color for the countdown text */
@@ -123,7 +114,7 @@ p {
     color: #000;
     width: 100%;
     text-align: left;
-height: auto;
+    height: auto;
 }
 
 nav {
@@ -147,6 +138,10 @@ nav.visible {
     display: block; /* Show menu when visible class is added */
 }
 
+section{
+  background-color: black;
+}
+
 .overview{
     border-radius: 20px;
     padding-left: 20px;
@@ -160,15 +155,6 @@ nav.visible {
     margin-top: 50px;
 }
 
-.register{
-    border-radius: 20px;
-    background-color:#fff;
-    text-align: center; 
-    opacity: 20%; 
-    margin-top: 60px;
-    margin-bottom: 30px;
-
-}
 .overview-img {
     width: 70%; /* Adjust image size */
     position: right;
@@ -179,46 +165,65 @@ nav.visible {
 * {
   box-sizing: border-box;
 }
-* {
-  box-sizing: border-box;
+
+
+.social-icons {
+  background-color:hsl(0deg 0% 22%);
+  position: fixed;
+  border-radius: 20px 0px 0px 20px;
+  top: 40%; /* Adjust to place vertically where needed */
+  right: 0px; /* Adjust to place horizontally where needed */
+  transform: translateY(-50%); /* Centers the icons vertically */
+  display: flex;
+  flex-direction: column;
+  gap: 3px; /* Space between the icons */
+  z-index: 1000; /* Ensures it stays on top of the content */
 }
+.social-icon {
+  width: 30px; /* Adjust the icon size */
+  height: auto;
+  margin-left: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-right: 5px;
+  cursor: pointer;
+  transition: transform 0.3s; /* Smooth hover effect */
+}
+.social-icon:hover {
+  transform: scale(1.2); /* Icons enlarge slightly on hover */
+}
+
 
 .pdf-container {
   display: flex;
   flex-wrap: wrap; /* Allows items to wrap to the next line */
   justify-content: space-around; /* Spaces the PDF items evenly */
   gap: 20px; /* Space between PDF items */
-  margin-top: 15%;
+  margin-top: 10%;
 }
-
 .pdf-item {
   text-align: center;
   width: 150px;
 }
-
 .pdf-icon {
   width: 100px; /* Adjust size of the PDF icon */
   height: auto;
   cursor: pointer;
   transition: transform 0.3s; /* Smooth hover effect */
 }
-
 .pdf-icon:hover {
   transform: scale(1.1); /* Scale up the icon on hover */
 }
-
 .pdf-item p {
   margin-top: 10px;
   font-size: 16px;
 }
-
 .pdf-item a {
   text-decoration: none;
   color: black;
   font-weight: bold;
   transition: color 0.3s;
 }
-
 .pdf-item a:hover {
   color: #007bff; /* Change text color on hover */
 }
@@ -252,30 +257,6 @@ nav.visible {
   .gallery {
     grid-template-columns: 1fr; /* One column for mobile */
   }
-}
-
-/* Responsive styles */
-
-body {
-    font-family: Arial, sans-serif;
-}
-
-/*quick links*/
-.social-media {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-}
-
-.social-icon {
-    margin: 0 15px;
-    font-size: 30px;
-    color: #333; /* Default color */
-    transition: color 0.3s ease; /* Smooth transition for color change */
-}
-
-.social-icon:hover {
-    color: #0077b5; /* Change to your desired hover color */
 }
 
 
