@@ -24,6 +24,7 @@ body, html {
 
 .university-logo {
     width: 200px; /* Adjust logo size */
+    mix-blend-mode:;
 }
 
 .menu-icon {
@@ -110,7 +111,6 @@ h2 {
  
 p {
     font-size: 20px;
-    margin: 50;
     color: #000;
     width: 100%;
     text-align: left;
@@ -194,38 +194,39 @@ section{
 }
 
 
-.pdf-container {
-  display: flex;
-  flex-wrap: wrap; /* Allows items to wrap to the next line */
-  justify-content: space-around; /* Spaces the PDF items evenly */
-  gap: 20px; /* Space between PDF items */
-  margin-top: 10%;
+
+
+.pdf-table {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background-color: #fff1f1;
 }
-.pdf-item {
+
+.pdf-text {
+  padding: 40px;
+  font-size: 18px;
+  color: #333;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.pdf-icon-cell {
+  padding: 15px;
   text-align: center;
-  width: 150px;
+  border: 1px solid #ddd;
 }
+
 .pdf-icon {
-  width: 100px; /* Adjust size of the PDF icon */
+  width: 60px; /* Adjust size of PDF icon */
   height: auto;
   cursor: pointer;
-  transition: transform 0.3s; /* Smooth hover effect */
+  transition: transform 0.3s;
 }
+
 .pdf-icon:hover {
-  transform: scale(1.1); /* Scale up the icon on hover */
-}
-.pdf-item p {
-  margin-top: 10px;
-  font-size: 16px;
-}
-.pdf-item a {
-  text-decoration: none;
-  color: black;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-.pdf-item a:hover {
-  color: #007bff; /* Change text color on hover */
+  transform: scale(1.1); /* Enlarge icon slightly on hover */
 }
 
 
