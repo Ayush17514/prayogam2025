@@ -10,11 +10,11 @@ body, html {
 }
 
 .header-first { /*logo containner-pink*/
-    background-color:hsl(322deg 95% 46%);
+    background-color:white;
 }
 
 .logo-container {
-    text-align: left;
+    text-align: center;
 }
 
 .royals-logo {
@@ -24,24 +24,19 @@ body, html {
 
 .university-logo {
     width: 200px; /* Adjust logo size */
-    mix-blend-mode:;
 }
 
-.menu-icon {
-    font-size: 24px;
-    cursor: pointer;
-    display: inline-block;
-}
 
 .landing-page {
     background-image: url('header2.png'); /* Replace with your background image URL */
     background-size: cover;
     background-position: center;
     display: flex;
+    width: 100%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100%;
+    height:90%;
     color: #ffe7eb;
     text-align: center;
     position: relative;
@@ -89,7 +84,7 @@ h1 {
     margin-top: 20px;
     text-align: center;
     position: absolute;
-    top:450px;
+    top:430px;
 }
 
 .countdown {
@@ -105,7 +100,7 @@ h2 {
     font-size: 35px;
     margin-top: 20px;
     width: 100%;
-    color:#05488b ;
+    color:#333 ;
     text-align: center;
 }
  
@@ -117,55 +112,152 @@ p {
     height: auto;
 }
 
-nav {
-    display: none; /* Initially hidden */
+
+.about-section {
+    display: flex;
+    padding-top: 40px;
+    margin-left:60px;
+    margin-right:60px;
+    background-color: #f9f9f9;
+    }
+
+.text-content h1 {
+    font-size: 2em;
+    color: #333;
+}
+.text-content p {
+    font-size: 1.1em;
+    padding-top: 16px;
+    color: #666;
 }
 
-nav ul {
-    list-style-type: none;
+
+
+
+/*statistics section */
+.stats-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+.stat-item {
+    margin: 0 20px;
+    font-family: Arial, bold;
+}
+.stat-divider {
+    font-size: 3em;
+    color: #999;
 }
 
-nav ul li {
-    margin: 10px 0;
+
+
+
+.speakers-section {
+    padding: 20px;
+    text-align: center;
+    background-color:#f9f9f9;
+    
+}
+.speakers-section h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    margin-top: 60px;
+    color: #333;
+}
+.speakers-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+.speaker-card {
+    width: 300px;
+    background-color: #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+}
+.speaker-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 75%;
+    margin-bottom: 10px;
+}
+.speaker-card h3 {
+    font-size: 1.2em;
+    color: #333;
+}
+.speaker-card p {
+    font-size: 0.9em;
+    color: #666;
+    text-align: center;
 }
 
-nav a {
-    color:#fff;
+
+
+
+/* Contact Section Styles */
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 30px 15px;
+    text-align: center;
+}
+.contact-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.contact-container p {
+    font-size: 16px;
+    color: #fff;
+    margin: 5px 0;
+}
+.contact-container a {
+    color: #fff;
     text-decoration: none;
 }
-
-nav.visible {
-    display: block; /* Show menu when visible class is added */
+.contact-container a:hover {
+    text-decoration: underline;
 }
 
-section{
-  background-color: black;
+
+/* Social Media Icons */
+.social-media {
+    margin-top: 20px;
+    display: flex;
+    justify-content: left;
+    gap: 20px;
+}
+.social-media a {
+    display: inline-block;
 }
 
-.overview{
-    border-radius: 20px;
-    padding-left: 20px;
-    margin-top: 10%;
-
+.social-media img {
+    width: 30px; /* Icon size */
+    height: 30px;
+    transition: transform 0.3s;
 }
 
-.events{
-    border-radius: 20px;
-    background-color:#185797; 
-    margin-top: 50px;
+.social-media img:hover {
+    transform: scale(1.2); /* Enlarge icons on hover */
 }
 
-.overview-img {
-    width: 70%; /* Adjust image size */
-    position: right;
-    margin-left: 100px;
-    margin-top: 40px;
-}
+/* Responsive Contact Section */
+@media (max-width: 768px) {
+    .contact-container h2 {
+        font-size: 20px;
+    }
 
-* {
-  box-sizing: border-box;
-}
+    .contact-container p {
+        font-size: 14px;
+    }
 
+    .social-media img {
+        width: 25px; /* Slightly smaller icons on mobile */
+    }
+}
 
 .social-icons {
   background-color:hsl(0deg 0% 22%);
@@ -195,7 +287,6 @@ section{
 
 
 
-
 .pdf-table {
   width: 100%;
   max-width: 800px;
@@ -213,13 +304,15 @@ section{
 }
 
 .pdf-icon-cell {
-  padding: 15px;
-  text-align: center;
+  padding: 20px;
+  text-align: bottom;
   border: 1px solid #ddd;
 }
-
+.pdf-icon-cell p {
+  font-size: 16px;
+}
 .pdf-icon {
-  width: 60px; /* Adjust size of PDF icon */
+  width: 70px; /* Adjust size of PDF icon */
   height: auto;
   cursor: pointer;
   transition: transform 0.3s;
@@ -247,47 +340,226 @@ section{
   object-fit: cover;
 
 }
-/* Make the gallery responsive */
-@media (max-width: 1024px) {
-  .gallery {
-    grid-template-columns: repeat(2, 1fr); /* Two columns for tablet */
-  }
+
+
+/* Reset some basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+
+
+/* Navbar styling */
+.navbar {
+    background-color:#05488b;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.menu-icon {
+    font-size: 10px;
+    background-color:#000;
+    cursor: pointer;
+    display: none; /* Hide menu icon by default */
+    position: absolute;
+    left: 10px;
+}
+
+/* Centering menu on larger screens */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 6px 10px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #001f3e;
+    border-radius: 5px;
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
-  .gallery {
-    grid-template-columns: 1fr; /* One column for mobile */
-  }
-}
-
-
-/* Responsive design */
-@media (min-width: 600px) {
     .menu-icon {
-        display: none; /* Hide menu icon on larger screens */
+        display: block; /* Show menu icon on mobile */
     }
 
-    nav {
-        display: block; /* Show nav directly on larger screens */
+    nav ul.menu {
+        display: none; /* Hide the menu by default on mobile */
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #000;
+        padding: 10px 0;
     }
 
-    nav ul {
-        display: flex;
-        justify-content: center;
-
+    nav ul.menu.active {
+        display: flex; /* Show the menu when active */
     }
 
     nav ul li {
-        margin: 0 25px;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
     }
-    .hidden
-    {
-        display: none;
+
+    nav ul li a {
+        display: block;
+        width: 100%;
     }
 }
-@media only screen and (min-width: 960px) {
-    .hidden
-    {
-        display: block;
+
+/* Desktop Styles */
+@media (min-width: 769px) {
+    nav ul {
+        display: flex; /* Display menu on larger screens */
     }
+}
+
+
+/* Smartphone (max-width: 600px) */
+@media (max-width: 600px) {
+    .logo-container, .landing-page, .about-section, .speakers-section, .social-icons {
+        text-align: center;
+
     }
+
+    /* Header */
+    .royals-logo {
+        width: 30px;
+    }
+    .university-logo {
+        width: 150px;
+    }
+
+    /* Landing Page */
+    .landing-page h1 {
+        font-size: 30px;
+    }
+    .landing-page {
+        height: 530px;
+    }
+    .quote {
+        font-size: 8px;
+    } 
+    .venue-timing {
+        font-size: 10px;
+        top: 325px;
+        padding: 3px;
+    }
+    .countdown {
+        font-size: 20px;
+    }
+
+    /* Text Content */
+    h3, h4, h5, h2, p {
+        font-size: 14px;
+    }
+
+    /* About Section */
+    .about-section {
+        flex-direction: column;
+        padding: 10px;
+    }
+    .text-content {
+        padding-right: 0;
+        font-size: 10px;
+    }
+
+.image-content {
+    flex: 1;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.image-content img {
+    max-width: 100%;
+    height: 80%;
+    border-radius: 14px;
+}
+
+.stats-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    font-weight: 20px;
+}
+
+.stat-item {
+    margin: 0 20px;
+}
+
+.stat-divider {
+    font-size: 2em;
+    color: #999;
+}
+
+}
+.speakers-section h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.speakers-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.speaker-card {
+    width: 250px;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 7px;
+    text-align: center;
+  }
+}
+
+.speaker-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 75%;
+    margin-bottom: 10px;
+}
+
+.speaker-card h3 {
+    font-size: 1em;
+}
+
+.speaker-card p {
+    font-size: 0.6em;
+}
+
+    /* Gallery */
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    /* Social Icons */
+    .social-icon {
+        width: 20px;
+        height: 20px;
+        margin-left: 10px;
+        margin-top: 10px;
+        margin-bottom: 1px;
+        margin-right: 5px;
+    }
+}
+
