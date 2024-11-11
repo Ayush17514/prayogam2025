@@ -1,74 +1,72 @@
-// Countdown Timer
-const eventDate = new Date("2025-02-28T10:00:00").getTime(); // Set your event date and time here
 
-const countdownElement = document.getElementById("countdown");
+// Set the event date
+const eventDate = new Date('March 25, 2025 00:00:00').getTime();
 
-const countdownInterval = setInterval(function() {
+// Function to update the countdown
+function updateCountdown() {
     const now = new Date().getTime();
-    const distance = eventDate - now;
+    const timeLeft = eventDate - now;
 
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    // Calculate days, hours, minutes, and seconds
+    const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
-    countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    // Update the countdown elements
+    document.getElementById('days').innerText = days;
+    document.getElementById('hours').innerText = hours;
+    document.getElementById('minutes').innerText = minutes;
+    document.getElementById('seconds').innerText = seconds;
 
-    if (distance < 0) {
+    // Stop the countdown when the event date is reached
+    if (timeLeft < 0) {
         clearInterval(countdownInterval);
-        countdownElement.innerHTML = "Event has started!";
+        document.querySelector('.countdown').innerText = "Event Started!";
     }
-}, 1000);
-
-
-// Initialize the starting index of the center speaker
-let currentIndex = 0;
-
-// Define an array of speaker objects, each containing image source, name, and title
-const speakers = [
-    { img: "pratishrawat.jpe", name: "Mr.Pratish Rawat", title: "HoD FCE DEpartment" },
-    { img: "president.webp", name: "Dr. Suresh Chandra Padhy", title: "President" },
-    { img: "chairperson.webp", name: "Ar. Shashikant Singhi", title: "Role/Title 3" }
-];
-
-/**
- * Renders the speaker cards in the carousel.
- * The middle speaker card is highlighted by adding the 'active' class.
- */
-function renderSpeakers() {
-    // Select the track container in the HTML
-    const track = document.getElementById("speaker-track");
-
-    // Map through each speaker in the array, creating an HTML template for each card
-    // Set the 'active' class on the middle card (index 1) for emphasis
-    track.innerHTML = speakers.map((speaker, index) => `
-        <div class="speaker-card ${index === 1 ? 'active' : ''}">
-            <img src="${speaker.img}" alt="${speaker.name}">
-            <h3>${speaker.name}</h3>
-            <p>${speaker.title}</p>
-        </div>
-    `).join(''); // Use join('') to combine all cards into a single HTML string
 }
 
-/**
- * Updates the slide to move to the next speaker.
- * This function shifts the array to keep the carousel looping infinitely.
- */
-function updateSlide() {
-    // Increment the index to move to the next speaker
-    currentIndex = (currentIndex + 1) % speakers.length;
+// Update the countdown every second
+const countdownInterval = setInterval(updateCountdown, 1000);
 
-    // Remove the first speaker from the array and push it to the end,
-    // creating a "rotating" effect for an infinite loop
-    speakers.push(speakers.shift());
 
-    // Re-render the speakers to reflect the updated order
-    renderSpeakers();
+
+// Function to animate the statistics count
+function animateStats(id, endValue) {
+    const element = document.getElementById(id);
+    let startValue = 0;
+    const duration = 1500; // Animation duration in milliseconds
+    const increment = Math.ceil(endValue / (duration / 30));
+
+    const counter = setInterval(() => {
+        startValue += increment;
+        if (startValue >= endValue) {
+            element.innerText = endValue;
+            clearInterval(counter);
+        } else {
+            element.innerText = startValue;
+        }
+    }, 30);
 }
 
-// Set an interval to automatically update the slide every 3 seconds
-// This creates an automatic slideshow effect
-setInterval(updateSlide, 3000);
+// Animate the statistics when the page loads
+window.addEventListener('load', () => {
+    animateStats('stat-projects', 180);
+    animateStats('stat-speakers', 25);
+    animateStats('stat-participants', 1500);
+    animateStats('stat-workshops', 12);
+});
+// JavaScript for Scroll Animation
+const speakerCards = document.querySelectorAll('.speaker-card');
 
-// Initial rendering of the speaker cards when the page loads
-renderSpeakers();
+window.addEventListener('scroll', () => {
+    speakerCards.forEach((card) => {
+        const cardTop = card.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        if (cardTop < windowHeight - 100) {
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+        }
+    });
+});

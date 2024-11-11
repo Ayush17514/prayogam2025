@@ -1,127 +1,281 @@
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Prayogam 2025</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body >
-        <div class="header-first">
-             <div class="logo-container">
-                <img src="poornimaunversity.png" alt="royals Logo" class="royals-logo">   
-                <img src="PUlogo.png" alt="University Logo" class="university-logo">
-               <!-- <img src="eventlogo.png" alt="event Logo" class="event-logo">-->
-           </div>
-       </div>
-        <div class="header-second">
-        <div class="navbar">
-        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
-        <nav>
-            <ul class="menu">
-                <li><a href="#about-section">About</a></li>
-                <li><a href="project.html">Projects</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="#contactus">Contact</a></li>
-            </ul>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRAYOGAM</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <!-- Logo -->
+        <div class="logo">PRAYOGAM 2025</div>
+
+        <!-- Desktop Navigation -->
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#speakers">Speakers</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
         </nav>
-    </div>
-    </div>
-    <script>
-    function toggleMenu() {
-        const menu = document.querySelector('.menu');
-        menu.classList.toggle('active');
-    }
-</script>
 
-        <div class="landing-page">
-            <h3>Welcome to</h3>
-            <h1>Prayogam 2025 </h1>
-            <h3 class="quote">"Innovation distinguishes between a leader and a follower."</h3>
-         <div class="venue-timing">Venue: University Auditorium | Timings: 10 AM - 5 PM</div>
-            <div id="countdown" class="countdown"></div>
-         </div>
-
-<!-- Social Media Icons -->
-  <div class="social-icons">
-    <a href="https://www.facebook.com" target="_blank">
-      <img src="facebook.png" alt="Facebook" class="social-icon">
-    </a>
-    <a href="https://www.instagram.com" target="_blank">
-      <img src="instagram.png" alt="Instagram" class="social-icon">
-    </a>
-    <a href="https://www.linkedin.com" target="_blank">
-      <img src="linkedin.png" alt="LinkedIn" class="social-icon">
-    </a>
-  </div>
-
-<!--about the fest-->
-        <div class="text-content">
-            <h1>About Tech Fest</h1>
-            <p>The Faculty of Computer Science & Engineering, Poornima University (PU), Jaipur organized the Annual Technical Project Expo “Prayogam-2024” on the occasion of National Science Day. 
-            The exhibition was intended to motivate students to apply the theoretical concepts in the form of projects. More than 1200 students participated in the exhibition and over 220 projects were displayed. Projects were focused on real world problems in the areas of AI, Data Science, Game Technology, IOT, Cyber Security, Web Technologies and Mobile applications.</p>
-            <img src="overview-prayogam-img.jpg" alt="image" class="text-content">   
+        <!-- Hamburger Menu (Mobile View) -->
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
         </div>
-    
 
-    <section class="stats-section">
-        <div class="stat-item " style="color:#05488b ;">1200+ Attendees</div>
-        <div class="stat-divider">|</div>
-        <div class="stat-item" style="color:#05488b;">250+ Projects</div>
-        <div class="stat-divider">|</div>
-        <div class="stat-item" style="color:#05488b;">10+ Speakers</div>
-    </section>
+        <!-- Mobile Navigation -->
+        <nav class="mobile-nav" id="mobile-nav">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#speakers">Speakers</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
 
+<!---------------------------------------------------------------------------------------------------->
+<!-- Landing Page Section -->
+    <section id="home" class="landing">
+        <div class="content">
+            <h1>PRAYOGAM 2025</h1>
+            <h2>Science Expo</h2>
 
- <section class="speakers-section">
-        <h2>Speakers</h2>
-        <div class="carousel-container">
-            <div class="speaker-track" id="speaker-track">
-                <div class="speaker-card">
-                    <img src="pratishrawat.jpe" alt="Speaker 1">
-                    <h3>Speaker Name 1</h3>
-                    <p>Role/Title</p>
+            <!-- Countdown Timer -->
+            <div class="countdown">
+                <div class="count-item">
+                    <span id="days">00</span>
+                    <p>Days</p>
                 </div>
-                 <div class="speaker-card">
-                    <img src="path/to/speaker1.jpg" alt="Speaker 1">
-                    <h3>Speaker Name 1</h3>
-                    <p>Role/Title</p>
+                <div class="count-item">
+                    <span id="hours">00</span>
+                    <p>Hours</p>
                 </div>
-                 <div class="speaker-card">
-                    <img src="path/to/speaker1.jpg" alt="Speaker 1">
-                    <h3>Speaker Name 1</h3>
-                    <p>Role/Title</p>
+                <div class="count-item">
+                    <span id="minutes">00</span>
+                    <p>Minutes</p>
                 </div>
-                <!-- Repeat or add more speaker cards as needed -->
+                <div class="count-item">
+                    <span id="seconds">00</span>
+                    <p>Seconds</p>
+                </div>
+            </div>
+
+            <!-- Event Date and Venue -->
+            <div class="event-info">
+                <p>Date: March 25, 2025</p>
+                <p>Venue: XYZ University Campus, New York</p>
             </div>
         </div>
     </section>
+<!---------------------------------------------------------------------------------------------------->
+<!--about the fest-->
+<section class="about-section" id="about">
+    <div class="about-content">
+        <h2>About Tech Fest</h2>
+        <p>
+                The Faculty of Computer Science & Engineering, Poornima University (PU), Jaipur organized the Annual Technical Project Expo “Prayogam-2024” on the occasion of National Science Day. 
+            The exhibition was intended to motivate students to apply the theoretical concepts in the form of projects. More than 1200 students participated in the exhibition and over 220 projects were displayed. Projects were focused on real world problems in the areas of AI, Data Science, Game Technology, IOT, Cyber Security, Web Technologies and Mobile applications.
+        </p>
+    </div>
+    <div class="about-image">
+        <img src="overview-prayogam-img.jpg" alt="image"> 
+    </div>
+</section>
+
+<!---------------------------------------------------------------------------------------------------->
+
+<!-- Professional Statistics Section -->
+<section class="statistics-section">
+    <div class="statistics-container">
+        <div class="stat-card">
+            <div class="stat-icon">🔍</div>
+            <div class="stat-info">
+                <h3 id="stat-projects">0</h3>
+                <p>Innovative Projects</p>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon">🎤</div>
+            <div class="stat-info">
+                <h3 id="stat-speakers">0</h3>
+                <p>Expert Speakers</p>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon">👥</div>
+            <div class="stat-info">
+                <h3 id="stat-participants">0</h3>
+                <p>Registered Participants</p>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon">🛠️</div>
+            <div class="stat-info">
+                <h3 id="stat-workshops">0</h3>
+                <p>Hands-on Workshops</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!---------------------------------------------------------------------------------------------------->
 
 
-       <!-- Contact Section -->
-<footer>
-    <div class="contact-container">
-        <h2>Contact Us</h2>
-        <p><a href="mailto:contact@poornimauniversity.edu.in">contact@poornimauniversity.edu.in</a></p>
-        <p><a href="tel:+1234567890">+1 (234) 567-890</a></p>
-        <p>IS-2027-2031, Ramchandrapura, P.O. Vidhani Vatika, Sitapura Extension, Jaipur, Rajasthan (India) 303905.</p>
+ <!-- Speaker Section -->
+<section class="speaker-section" id="speakers">
+    <h2>Our Esteemed Speakers</h2>
+    <div class="speaker-container">
+        <!-- Speaker Card 1 -->
+        <div class="speaker-card">
+            <div class="speaker-image">
+                <img src="pratishrawat.jpe" alt="Speaker 1">
+            </div>
+            <div class="speaker-info">
+                <h3>Mr.Pratish Rawat</h3>
+                <p>HoD</p>
+                <span>Faculty Of Computer Engineering</span>
+            </div>
+        </div>
+
+        <!-- Speaker Card 2 -->
+        <div class="speaker-card">
+            <div class="speaker-image">
+                <img src="president.jpg" alt="Speaker 2">
+            </div>
+            <div class="speaker-info">
+                <h3></h3>
+                <p>Robotics Expert</p>
+                <span>Innovating the Future of Robotics</span>
+            </div>
+        </div>
+
+        <!-- Speaker Card 3 -->
+        <div class="speaker-card">
+            <div class="speaker-image">
+                <img src="Ajay sir.JPG" alt="Speaker 3">
+            </div>
+            <div class="speaker-info">
+                <h3>Dr.Ajay Khunteta</h3>
+                <p>Dean</p>
+                <span>Faculty Of Computer Engineering</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!---------------------------------------------------------------------------------------------------->
+<!-- Gallery Section -->
+<section class="gallery-section" id="gallery">
+    <h2>Event Gallery</h2>
+    <div class="gallery-container">
+        <!-- Image Cards -->
+        <div class="gallery-item">
+            <img src="IMG_7538.JPG" alt="Gallery Image 1">
+        </div>
+        <div class="gallery-item">
+            <img src="IMG_7548.JPG" alt="Gallery Image 2">
+        </div>
+        <div class="gallery-item">
+            <img src="IMG_7549.JPG" alt="Gallery Image 3">
+        </div>
+        <div class="gallery-item">
+            <img src="IMG_7554.JPG" alt="Gallery Image 4">
+        </div>
+        <div class="gallery-item">
+            <img src="IMG_7562.JPG" alt="Gallery Image 5">
+        </div>
+        <div class="gallery-item">
+            <img src="IMG_7565.JPG" alt="Gallery Image 6">
+        </div>
         
-        <div class="social-media">
-            <a href="https://www.facebook.com/poornimauniversity" target="_blank" aria-label="Facebook">
-                <img src="facebook.png" alt="Facebook" />
+    </div>
+
+    <!-- View All Button -->
+    <div class="view-all-container">
+        <a href="gallery-full-page.html" class="view-all-btn">View All Images</a>
+    </div>
+</section>
+<!---------------------------------------------------------------------------------------------------->
+
+<!-- Projects Section -->
+<section class="projects-section" id="projects">
+    <h2>First Year Student Projects</h2>
+    <p>Explore the amazing projects from our first-year students, across 3 years of tech fest.</p>
+
+    <div class="projects-container">
+        <!-- Year 2023 Projects -->
+        <div class="project-year">
+            <h3>2023 Projects</h3>
+            <p>Discover the groundbreaking projects presented in 2023 by our first-year students.</p>
+            <a href="path/to/2023-projects.pdf" class="project-link" download>
+                <span class="pdf-icon">📄</span> Download PDF of 2023 Projects
             </a>
-            <a href="https://www.twitter.com/university" target="_blank" aria-label="Twitter">
-                <img src="twitter.png" alt="Twitter" />
+        </div>
+
+        <!-- Year 2024 Projects -->
+        <div class="project-year">
+            <h3>2024 Projects</h3>
+            <p>Explore the innovative projects submitted by students in 2024.</p>
+            <a href="path/to/2024-projects.pdf" class="project-link" download>
+                <span class="pdf-icon">📄</span> Download PDF of 2024 Projects
             </a>
-            <a href="https://www.instagram.com/university" target="_blank" aria-label="Instagram">
-                <img src="instagram.png" alt="Instagram"/>
-            </a>
-            <a href="https://www.linkedin.com/school/university" target="_blank" aria-label="LinkedIn">
-                <img src="linkedin.png" alt="LinkedIn" />
+        </div>
+
+        <!-- Year 2025 Projects -->
+        <div class="project-year">
+            <h3>2025 Projects</h3>
+            <p>Get a look at the future of innovation with the 2025 student projects.</p>
+            <a href="path/to/2025-projects.pdf" class="project-link" download>
+                <span class="pdf-icon">📄</span> Download PDF of 2025 Projects
             </a>
         </div>
     </div>
-</footer>
+</section>
+
+<!---------------------------------------------------------------------------------------------------->
+  <!-- Contact Section -->
+<section class="contact-section" id="contact">
+    <div class="contact-container">
+        <!-- Left Section: Quick Links -->
+        <div class="quick-links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#speakers">Speakers</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#projects">Projects</a></li>
+            </ul>
+        </div>
+
+        <!-- Right Section: Contact Info -->
+        <div class="contact-info">
+            <h3>Contact Information</h3>
+            <div class="contact-item">
+                <span class="icon">📍</span>
+                <p>123 Tech Fest Avenue, City, Country</p>
+            </div>
+            <div class="contact-item">
+                <span class="icon">📧</span>
+                <p>contact@techfest.com</p>
+            </div>
+            <div class="contact-item">
+                <span class="icon">📞</span>
+                <p>(123) 456-7890</p>
+            </div>
+        </div>
+    </div>
+
+</section>
+
         <script src="script.js"></script>
     </body>
     </html>
