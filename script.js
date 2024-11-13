@@ -29,8 +29,7 @@ function updateCountdown() {
 // Update the countdown every second
 const countdownInterval = setInterval(updateCountdown, 1000);
 
-
-
+//------------------------------------------------------------------------------------------------
 // Function to animate the statistics count
 function animateStats(id, endValue) {
     const element = document.getElementById(id);
@@ -56,6 +55,9 @@ window.addEventListener('load', () => {
     animateStats('stat-participants', 1500);
     animateStats('stat-workshops', 12);
 });
+
+
+//------------------------------------------------------------------------------------------------
 // JavaScript for Scroll Animation
 const speakerCards = document.querySelectorAll('.speaker-card');
 
