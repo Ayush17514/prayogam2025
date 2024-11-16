@@ -51,24 +51,10 @@ function animateStats(id, endValue) {
 // Animate the statistics when the page loads
 window.addEventListener('load', () => {
     animateStats('stat-projects', 180);
-    animateStats('stat-speakers', 25);
-    animateStats('stat-participants', 1500);
+    animateStats('stat-speakers', 10);
+    animateStats('stat-participants', 12);
     animateStats('stat-workshops', 12);
 });
 
 
 //------------------------------------------------------------------------------------------------
-// JavaScript for Scroll Animation
-const speakerCards = document.querySelectorAll('.speaker-card');
-
-window.addEventListener('scroll', () => {
-    speakerCards.forEach((card) => {
-        const cardTop = card.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
-
-        if (cardTop < windowHeight - 100) {
-            card.style.opacity = '1';
-            card.style.transform = 'translateY(0)';
-        }
-    });
-});
