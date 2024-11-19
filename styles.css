@@ -14,7 +14,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+    margin-right: 30px;
     background-color: #fff; /* Navy Blue */
     color: #FFF; /* White */
     position: sticky;
@@ -23,11 +23,10 @@ header {
 }
 
 /* Logo Styling */
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
+.logo img {
     padding-left: 20px;
-    color: #188888; /* Gold */
+    width: 100px;
+    height: 40px;
 }
 
 /* Navigation Styles */
@@ -60,8 +59,9 @@ header {
 .hamburger div {
     width: 25px;
     height: 3px;
-    background-color: #FFF;
+    background-color: #000;
     margin: 4px 0;
+    margin-right: 16px;
     transition: 0.3s;
 }
 
@@ -70,7 +70,7 @@ header {
     display: none;
     flex-direction: column;
     gap: 15px;
-    background-color: #1E3A8A;
+    background-color: transparent;
     position: absolute;
     top: 60px;
     right: 30px;
@@ -83,8 +83,8 @@ header {
 }
 
 .mobile-nav a:hover {
-    background-color:#F0E68C;
-    color: #1E3A8A;
+   
+    color:  #F0E68C;
 }
 
 /* Responsive Design */
@@ -92,14 +92,39 @@ header {
     .navbar {
         display: none;
     }
+
     .hamburger {
         display: flex;
     }
 }
 
-.show {
+/* Checkbox Toggle for Mobile Navigation */
+.menu-toggle {
+    display: none;
+}
+
+.menu-toggle:checked ~ .mobile-nav {
     display: flex;
 }
+
+/* Animation for Hamburger Icon (Open/Close) */
+.menu-toggle:checked + .hamburger div:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle:checked + .hamburger div:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle:checked + .hamburger div:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Hide Mobile Menu After Clicking a Link */
+.nav-link:target ~ #menu-toggle {
+    display: none;
+}
+
 
 
 /* Landing Page Styles */
@@ -168,18 +193,23 @@ header {
     .landing {
     width: 100%;
     flex-direction: column;
-    height:70%;
+    height:100%;
     position: relative;
 }
    .content h1 {
       font-size: 2.5rem;
+      margin-left: 20px;
       margin-top: 30%;
 }
     .content h2 {
         font-size: 1rem;
+         margin-left: 20px;
         text-align:left;
         position: relative;
 }
+.event-info p {
+    margin-left: 20px;
+    }
     .count-item span {
         font-size: 1rem;
         text-align: center;
@@ -248,13 +278,14 @@ header {
 @media (max-width: 768px) {
     .about-section {
         flex-direction: column;
-        padding: 30px;
+        width: 90%;
+        padding: 20px;
     }
     .about-content h2 {
         font-size: 2rem;
     }
     .about-content p {
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
 }
 
@@ -687,10 +718,11 @@ header {
     color: #777;
     }
 }
+
 /* Footer Container */
 .footer {
     width: 100%;
-    padding: 2rem 1.5rem;
+    padding-top: 10px;
     background-color: #121212; /* Dark theme background */
     color: #f0f0f0; /* Light text color for contrast */
 }
@@ -712,7 +744,6 @@ header {
 
 /* Quick Links and Social Media Styles */
 .footer .links p,
-.footer .social-media p,
 .footer .details p {
     margin: 0.5rem 0;
 }
@@ -737,6 +768,7 @@ header {
 /* Contact Details Styles */
 .footer .details p {
     line-height: 1.5;
+    flex-wrap: wrap;
 }
 
 /* Footer Bottom Section */
@@ -754,7 +786,14 @@ footer {
 /* Responsive Styles */
 @media (max-width: 767px) {
     .footer .content {
-        text-align: left;
+    display: unset;
+    flex-wrap: wrap;
+    justify-content: space-around;
+   
+}
+    .footer .details p {
+    font-size: 15px;
+    flex-wrap: wrap;
     }
 }
 
