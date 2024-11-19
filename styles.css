@@ -789,17 +789,19 @@ footer {
 @media (max-width: 767px) {
     .footer .content {
     display: unset;
-    width: 100%;
     flex-wrap: wrap;
     justify-content: space-around;
    
 }
-    .footer {
-    padding-left: 30px;
+    .mobile-footer{
+        margin-left: 20px;
     }
-    .link.details p {
-    font-size: 15px;
+    .link p {
+    font-size: 13px;
     flex-wrap: wrap;
+    }
+    .details p {
+     font-size: 13px;
     }
 }
 
