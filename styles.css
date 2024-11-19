@@ -5,6 +5,7 @@ body {
 
 body, html {
     height: 100%;
+    width: 100%;
     margin: 0;
     padding: 0;
 }
@@ -14,7 +15,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-right: 30px;
+   
     background-color: #fff; /* Navy Blue */
     color: #FFF; /* White */
     position: sticky;
@@ -172,6 +173,7 @@ header {
 
 .count-item span {
     font-size: 2rem;
+    text-align: center;
     color: #F0E68C;
 }
 
@@ -787,11 +789,15 @@ footer {
 @media (max-width: 767px) {
     .footer .content {
     display: unset;
+    width: 100%;
     flex-wrap: wrap;
     justify-content: space-around;
    
 }
-    .footer .details p {
+    .footer {
+    padding-left: 30px;
+    }
+    .link.details p {
     font-size: 15px;
     flex-wrap: wrap;
     }
