@@ -233,7 +233,7 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 40px;
-    background-color: #f4f4f4; /* Light Gray Background */
+    background-color:#f7f8fc; /* Light Gray Background */
     color: #1E3A8A; /* Navy Blue Text */
     gap: 20px;
 }
@@ -294,8 +294,8 @@ header {
 /* Statistics Section Styles */
 .statistics-section {
     padding: 1px 20px;
-    background-color: #fff; /* Navy Blue */
-    color:  #188888; /* Gold */
+    background-color: #f7f8fc;
+    color:  #188888; 
     text-align: center;
 }
 
@@ -626,7 +626,7 @@ header {
 /* Team Section Styles */
 .team-section {
     padding: 60px 20px;
-    background-color: #f9f9f9;
+    background-color:#f7f8fc;
     text-align: center;
 }
 
@@ -645,7 +645,6 @@ header {
 .team-slider {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    
     justify-content: center;
     align-items: center;
     gap: 20px;
@@ -654,7 +653,7 @@ header {
 }
 
 .team-card {
-    background-color: #fff;
+    background-color:#f7f8fc;
     border-radius: 10px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     text-align: center;
