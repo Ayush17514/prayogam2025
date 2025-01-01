@@ -30,31 +30,3 @@ function updateCountdown() {
 const countdownInterval = setInterval(updateCountdown, 1000);
 
 //------------------------------------------------------------------------------------------------
-// Function to animate the statistics count
-function animateStats(id, endValue) {
-    const element = document.getElementById(id);
-    let startValue = 0;
-    const duration = 1500; // Animation duration in milliseconds
-    const increment = Math.ceil(endValue / (duration / 30));
-
-    const counter = setInterval(() => {
-        startValue += increment;
-        if (startValue >= endValue) {
-            element.innerText = endValue;
-            clearInterval(counter);
-        } else {
-            element.innerText = startValue;
-        }
-    }, 30);
-}
-
-// Animate the statistics when the page loads
-window.addEventListener('load', () => {
-    animateStats('stat-projects', 180);
-    animateStats('stat-speakers', 10);
-    animateStats('stat-participants', 12);
-    animateStats('stat-workshops', 12);
-});
-
-
-//------------------------------------------------------------------------------------------------

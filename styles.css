@@ -1,5 +1,5 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Montserrat", serif;
     background-color: #fff;
 }
 
@@ -15,24 +15,23 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-   
-    background-color: #fff; /* Navy Blue */
-    color: #FFF; /* White */
-    position: sticky;
+    background-color: #fff;
+    color: #FFF; 
+    position:static;
     top: 0;
     z-index: 1000;
 }
 
 /* Logo Styling */
 .logo img {
-    padding-left: 20px;
+    padding-left: 50px;
     width: 100px;
-    height: 40px;
 }
 
 /* Navigation Styles */
 .navbar {
     display: flex;
+    padding-right: 50px;
     gap: 20px;
 }
 
@@ -45,6 +44,10 @@ header {
     border-radius: 5px;
 }
 
+.navbar .home a{
+    background-color: #F0E68C; /* Gold */
+    color:#000; /* Navy Blue */
+}
 .navbar a:hover {
     background-color: #F0E68C; /* Gold */
     color:#000; /* Navy Blue */
@@ -130,7 +133,7 @@ header {
 
 /* Landing Page Styles */
 .landing {
-   background-image: url('header2.png'); /* Replace with your background image URL */
+    background-image: url('header2.png'); /* Replace with your background image URL */
     background-size: cover;
     background-position: center;
     display: flex;
@@ -146,14 +149,15 @@ header {
     text-align: left;
     margin-left: 70px;
     margin-top: 10%;
-    color: #F0E68C;
+    color: #fff;
 }
+
 
 .content h2 {
     font-size:20px;
     text-align: left;
     margin-left: 70px;
-    color: #188888;
+    color: #f0e68c;
 }
 
 /* Countdown Timer Styles */
@@ -244,15 +248,16 @@ header {
 }
 
 .about-content h2 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     margin-bottom: 20px;
-    color:  #188888; /* Gold */
+    color:  #3e0e12; /* Gold */
 }
 
 .about-content p {
     font-size: 1.2rem;
     line-height: 1.6;
     color: #333;
+    text-align: justify;
 }
 
 .about-image {
@@ -266,14 +271,6 @@ header {
     width: 100%;
     max-width: 500px;
     height: auto;
-    border-radius: 15px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
-}
-
-/* Hover Effect for Image */
-.about-image img:hover {
-    transform: scale(1.05);
 }
 
 /* Responsive Design */
@@ -284,83 +281,17 @@ header {
         padding: 20px;
     }
     .about-content h2 {
-        font-size: 2rem;
+        font-size: 1.7rem;
     }
     .about-content p {
         font-size: 1rem;
     }
 }
 
-/* Statistics Section Styles */
-.statistics-section {
-    padding: 1px 20px;
-    background-color: #f7f8fc;
-    color:  #188888; 
-    text-align: center;
-}
-
-.statistics-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-    color:  #188888;
-    text-transform: uppercase;
-}
-
-.statistics-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-}
-
-.stat-card {
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 15px;
-    width: 250px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s;
-    text-align: center;
-}
-
-.stat-card:hover {
-    transform: translateY(-10px);
-}
-
-.stat-icon {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
-    color: #F0E68C;
-}
-
-.stat-info h3 {
-    font-size: 2.5rem;
-    color: #188888;
-    margin: 10px 0;
-}
-
-.stat-info p {
-    font-size: 1.1rem;
-    color:#1E3A8A;
-    text-align: center;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .statistics-container {
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    column-gap: 20px;
-    }
-    .stat-card {
-        width: 80%;
-        max-width: 350px;
-    }
-}
 
 /* Speaker Section Styles */
 .speaker-section {
-    padding: 60px 20px;
+    padding: 10px 20px;
     background-color: #f7f8fc;
     color: #333;
     text-align: center;
@@ -368,16 +299,19 @@ header {
 
 .speaker-section h2 {
     font-size: 2.5rem;
-    margin-top: 50px;
-    margin-bottom: 40px;
-    color: #188888;
+    color:#3e0e12;
 }
-
+.speaker-section p{
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 17px;
+    text-align: center;
+}
 .speaker-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 10px;
 }
 
 .speaker-card {
@@ -461,13 +395,13 @@ header {
 .gallery-section h2 {
     font-size: 2.5rem;
     margin-bottom: 40px;
-    color:  #188888;
+    color: #3e0e12;
 }
 
 .gallery-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 10px;
     justify-items: center;
 }
 
@@ -475,7 +409,6 @@ header {
     width: 100%;
     height: 250px;
     overflow: hidden;
-    border-radius: 10px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     position: relative;
 }
@@ -496,17 +429,17 @@ header {
 }
 
 .view-all-btn {
-    background-color:#c1b440;
-    color: #FFF;
+    background-color:#3e0e12;
+    color: #fff;
     padding: 15px 30px;
-    font-size: 1.2rem;
+    font-size: 0.8rem;
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
 .view-all-btn:hover {
-    background-color: #F0E68C;
+    background-color: #72383d;
 }
 
 /* Responsive Design */
@@ -534,10 +467,12 @@ header {
 .projects-section h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
-    color: #188888;
+    color: #3e0e12;
 }
 
 .projects-section p {
+     margin-left: 10%;
+    margin-right: 10%;
     font-size: 1.2rem;
     color: #555;
     margin-bottom: 40px;
@@ -566,7 +501,7 @@ header {
 
 .project-year h3 {
     font-size: 1.8rem;
-    color: #1E3A8A;
+    color:#003D4B;
     margin-bottom: 10px;
 }
 
@@ -578,16 +513,17 @@ header {
 
 .project-link {
     display: inline-block;
-    padding: 10px 20px;
-    background-color:#c1b440;
+   padding: 15px 30px;
+    background-color:#3e0e12;
     color: #FFF;
+    font-size: 0.8rem;
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
 .project-link:hover {
-    background-color: #F0E68C;
+    background-color: #72383d;
 }
 
 .pdf-icon {
@@ -632,7 +568,7 @@ header {
 
 .team-section h2 {
     font-size: 2.5rem;
-    color: #188888;
+    color:#3e0e12;
     margin-bottom: 10px;
 }
 
@@ -727,7 +663,12 @@ header {
     background-color: #121212; /* Dark theme background */
     color: #f0f0f0; /* Light text color for contrast */
 }
-
+.footer-logo img{
+    padding-top: 20px;
+    width: 400px;
+    height: 200px;
+    mix-blend-mode: difference;
+}
 /* Footer Content Layout */
 .footer .content {
     display: flex;
