@@ -17,7 +17,7 @@ header {
     align-items: center;
     background-color: #fff;
     color: #FFF; 
-    position:static;
+    position:sticky;
     top: 0;
     z-index: 1000;
 }
@@ -43,16 +43,9 @@ header {
     transition: background-color 0.3s, color 0.3s;
     border-radius: 5px;
 }
-
-.navbar .home a{
-    background-color: #F0E68C; /* Gold */
-    color:#000; /* Navy Blue */
-}
 .navbar a:hover {
-    background-color: #F0E68C; /* Gold */
-    color:#000; /* Navy Blue */
+    color:#000;
 }
-
 /* Hamburger Menu (Mobile View) */
 .hamburger {
     display: none;
@@ -157,7 +150,7 @@ header {
     font-size:20px;
     text-align: left;
     margin-left: 70px;
-    color: #f0e68c;
+    color: #b99e2b;
 }
 
 /* Countdown Timer Styles */
@@ -167,6 +160,7 @@ header {
     justify-content:right;
     margin-right: 70px;
     margin-bottom: 20px;
+    color: #c5b264;;
 }
 
 .count-item {
@@ -193,6 +187,24 @@ header {
     margin-left: 70px;
     color: #fff;
 }
+.register-btn {
+  display: inline-block;
+  background-color:#b99e2b; /* Button color */
+  color: #fff; /* Text color */
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.5rem;
+  text-align: center;
+  margin-left: 70px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.register-btn:hover {
+  background-color: #c5b264; /* Hover color */
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -213,9 +225,9 @@ header {
         text-align:left;
         position: relative;
 }
-.event-info p {
+    .event-info p {
     margin-left: 20px;
-    }
+}
     .count-item span {
         font-size: 1rem;
         text-align: center;
@@ -250,12 +262,12 @@ header {
 .about-content h2 {
     font-size: 2.2rem;
     margin-bottom: 20px;
-    color:  #3e0e12; /* Gold */
+    color:  #3e0e12;
 }
 
 .about-content p {
-    font-size: 1.2rem;
-    line-height: 1.6;
+    font-size: 19px;
+    
     color: #333;
     text-align: justify;
 }
@@ -289,6 +301,8 @@ header {
 }
 
 
+
+
 /* Speaker Section Styles */
 .speaker-section {
     padding: 10px 20px;
@@ -297,19 +311,21 @@ header {
     text-align: center;
 }
 
-.speaker-section h2 {
-    font-size: 2.5rem;
-    color:#3e0e12;
+.speaker-section h2{
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color:  #3e0e12; /* purple*/
 }
 .speaker-section p{
     margin-left: 10%;
     margin-right: 10%;
-    font-size: 17px;
+    font-size: 19px;
     text-align: center;
 }
 .speaker-container {
     display: flex;
     flex-wrap: wrap;
+    margin-top: 40px;
     justify-content: center;
     gap: 10px;
 }
@@ -317,7 +333,6 @@ header {
 .speaker-card {
     width: 300px;
     background-color: #FFF;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     animation: slideIn 0.6s ease forwards;
@@ -384,6 +399,9 @@ header {
     }
 }
 
+
+
+
 /* Gallery Section Styles */
 .gallery-section {
     padding: 60px 20px;
@@ -393,9 +411,9 @@ header {
 }
 
 .gallery-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-    color: #3e0e12;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color:  #3e0e12;
 }
 
 .gallery-container {
@@ -465,9 +483,9 @@ header {
 }
 
 .projects-section h2 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     margin-bottom: 20px;
-    color: #3e0e12;
+    color:  #3e0e12;
 }
 
 .projects-section p {
@@ -567,9 +585,9 @@ header {
 }
 
 .team-section h2 {
-    font-size: 2.5rem;
-    color:#3e0e12;
-    margin-bottom: 10px;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color:  #3e0e12;
 }
 
 .team-section p {
@@ -663,12 +681,6 @@ header {
     background-color: #121212; /* Dark theme background */
     color: #f0f0f0; /* Light text color for contrast */
 }
-.footer-logo img{
-    padding-top: 20px;
-    width: 400px;
-    height: 200px;
-    mix-blend-mode: difference;
-}
 /* Footer Content Layout */
 .footer .content {
     display: flex;
@@ -679,8 +691,8 @@ header {
 
 /* Section Headings */
 .footer h4 {
-    font-size: 1.2rem;
-    color: #887fff; /* Accent color */
+    font-size: 20px;
+    color: #fff; /* Accent color */
     margin-bottom: 1rem;
 }
 
@@ -688,17 +700,19 @@ header {
 .footer .links p,
 .footer .details p {
     margin: 0.5rem 0;
+    color: #888;
 }
 
 .footer a {
-    color: #f0f0f0;
+    color: #888;
+    gap: 10px;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 /* Hover Effect for Links */
 .footer a:hover {
-    color: #887fff; /* Light blue hover color */
+    color: #c5b264; 
 }
 
 /* Social Media Icons */
@@ -723,6 +737,7 @@ footer {
 .credit {
     font-size: 0.9rem;
     color: #bbb;
+    background-color: #30302c;
 }
 
 /* Responsive Styles */
