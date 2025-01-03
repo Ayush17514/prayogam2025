@@ -211,7 +211,11 @@ header {
     .landing {
     width: 100%;
     flex-direction: column;
-    height:100%;
+    height:auto;
+    background-image: url('header1.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
     position: relative;
 }
    .content h1 {
@@ -240,6 +244,8 @@ header {
     margin-right: 0px;
     margin-bottom: 0px;
 }
+    .register-btn {
+        }
 
 }
 
