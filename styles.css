@@ -87,11 +87,14 @@ header {
 /* Responsive Design */
 @media (max-width: 768px) {
     .navbar {
-        display: none;
+    display: none;
     }
-
+    .logo img {
+    padding-left: 10px;
+    width: 100px;
+    }
     .hamburger {
-        display: flex;
+    display: flex;
     }
 }
 
@@ -245,7 +248,21 @@ header {
     margin-bottom: 0px;
 }
     .register-btn {
-        }
+  display: inline-block;
+  background-color:#b99e2b; /* Button color */
+  color: #fff; /* Text color */
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.5rem;
+  margin-top: 10%;
+  margin-bottom: 30px;
+  margin-left: 100px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
 
 }
 
@@ -261,7 +278,7 @@ header {
 }
 
 .about-content {
-    flex: 1;
+    flex: 1rem;
     padding: 20px;
 }
 
@@ -273,7 +290,6 @@ header {
 
 .about-content p {
     font-size: 19px;
-    
     color: #333;
     text-align: justify;
 }
@@ -403,6 +419,10 @@ header {
         width: 100%;
         max-width: 90%;
     }
+    .speaker-section p{
+    font-size: 1rem;
+    text-align: justify;
+}
 }
 
 
@@ -569,7 +589,8 @@ header {
 }
 
     .projects-section p {
-       font-size: 1rem;
+    font-size: 1rem;
+    text-align: justify;
 }
     .projects-container {
         grid-template-columns: 1fr;
