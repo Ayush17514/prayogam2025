@@ -247,7 +247,7 @@ header {
     margin-right: 0px;
     margin-bottom: 0px;
 }
-    .register-btn {
+  .register-btn {
   display: inline-block;
   background-color:#b99e2b; /* Button color */
   color: #fff; /* Text color */
@@ -258,7 +258,7 @@ header {
   border-radius: 0.5rem;
   margin-top: 10%;
   margin-bottom: 30px;
-  margin-left: 100px;
+  margin-left: 130px;
   text-decoration: none;
   transition: background-color 0.3s ease;
 }
@@ -315,11 +315,21 @@ header {
         padding: 20px;
     }
     .about-content h2 {
-        font-size: 1.7rem;
+        font-size: 2.2rem;
     }
     .about-content p {
         font-size: 1rem;
     }
+
+    .about-content {
+        padding: 0px;
+    }
+
+    .about-image img {
+        max-width: 400px;
+
+    }
+
 }
 
 
@@ -420,6 +430,8 @@ header {
         max-width: 90%;
     }
     .speaker-section p{
+    margin-left: 0%;
+    margin-right: 0%;
     font-size: 1rem;
     text-align: justify;
 }
@@ -557,7 +569,7 @@ header {
 
 .project-link {
     display: inline-block;
-   padding: 15px 30px;
+    padding: 15px 30px;
     background-color:#3e0e12;
     color: #FFF;
     font-size: 0.8rem;
@@ -590,6 +602,8 @@ header {
 
     .projects-section p {
     font-size: 1rem;
+    margin-left: 0%;
+    margin-right: 0%;
     text-align: justify;
 }
     .projects-container {
@@ -600,7 +614,8 @@ header {
 }
 
     .project-year p {
-    font-size: 0.6rem;
+    font-size: 0.9rem;
+    text-align: center;
 }
 }
 
@@ -687,7 +702,8 @@ header {
     }
 
     .team-card {
-        width: 90%;
+    width: 100%;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
     }
 
     .team-card h3 {
@@ -700,6 +716,8 @@ header {
     color: #777;
     }
 }
+
+
 
 /* Footer Container */
 .footer {
@@ -724,8 +742,7 @@ header {
 }
 
 /* Quick Links and Social Media Styles */
-.footer .links p,
-.footer .details p {
+.footer .links p{
     margin: 0.5rem 0;
     color: #888;
 }
@@ -752,6 +769,7 @@ header {
 .footer .details p {
     line-height: 1.5;
     flex-wrap: wrap;
+    color: #888;
 }
 
 /* Footer Bottom Section */
@@ -768,7 +786,7 @@ footer {
 }
 
 /* Responsive Styles */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .footer .content {
     display: unset;
     flex-wrap: wrap;
@@ -776,14 +794,11 @@ footer {
    
 }
     .mobile-footer{
-        margin-left: 20px;
+    margin-left: 20px;
     }
-    .link p {
+    .link p ,.details p {
     font-size: 13px;
     flex-wrap: wrap;
-    }
-    .details p {
-     font-size: 13px;
     }
 }
 
