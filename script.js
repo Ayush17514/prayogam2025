@@ -68,7 +68,7 @@ registrationForm.onsubmit = async function (e) {
 
   // Make a POST request to your serverless function for registration
   try {
-    const response = await fetch("/pages/api/register", {
+    const response = await fetch("/pages/api/register.js", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
