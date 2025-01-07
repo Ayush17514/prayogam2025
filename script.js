@@ -30,3 +30,65 @@ function updateCountdown() {
 const countdownInterval = setInterval(updateCountdown, 1000);
 
 //------------------------------------------------------------------------------------------------
+
+// Get the modal
+const modal = document.getElementById("registrationModal");
+
+// Get the button that opens the modal
+const openModalBtn = document.getElementById("openModalBtn");
+
+// Get the <span> element that closes the modal
+const closeModalBtn = document.getElementsByClassName("close-btn")[0];
+
+// When the user clicks the button, open the modal
+openModalBtn.onclick = function () {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+closeModalBtn.onclick = function () {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+}
+
+// Handle form submission (for example, send data to server or process it)
+const registrationForm = document.getElementById("registrationForm");
+
+registrationForm.onsubmit = async function (e) {
+  e.preventDefault(); // Prevent the default form submission behavior
+
+  const username = document.getElementById("username").value;
+  const email = document.getElementById("email").value;
+
+  // Make a POST request to your serverless function for registration
+  try {
+    const response = await fetch("/api/register", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        username: username,
+        email: email,
+      }),
+    });
+
+    const data = await response.json();
+
+    if (response.ok) {
+      alert("Registration successful!");
+      modal.style.display = "none"; // Close the modal on success
+    } else {
+      alert("Error: " + data.message);
+    }
+  } catch (error) {
+    console.error("Error during registration:", error);
+    alert("An error occurred. Please try again.");
+  }
+};

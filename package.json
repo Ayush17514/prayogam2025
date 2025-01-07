@@ -1,0 +1,23 @@
+{
+  "name": "prayogam2025",
+  "version": "1.0.0",
+  "description": "link of the website : \"https://prayogam2025.netlify.app\"",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ayush17514/prayogam2025.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ayush17514/prayogam2025/issues"
+  },
+  "homepage": "https://github.com/Ayush17514/prayogam2025#readme",
+  "dependencies": {
+    "ioredis": "^5.4.2"
+  }
+}
