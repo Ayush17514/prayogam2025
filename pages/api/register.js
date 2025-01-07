@@ -8,7 +8,6 @@ const redis = new Redis({
 });
 
 export default async function handler(req, res) {
-  // Only allow POST requests for registration
   if (req.method === 'POST') {
     const { username, email } = req.body;
 
@@ -18,20 +17,14 @@ export default async function handler(req, res) {
     }
 
     try {
-      // Store registration data in Redis using a unique key based on the username
-      const userId = `user:${username}`;
-      const userData = {
-        username,
-        email,
-      };
+      // Process the registration (e.g., store the data in Redis)
 
-      // Save the user data in Redis as a hash (field-value pairs)
-      await redis.hmset(userId, userData);
-
-      // Respond with success
+      // If registration is successful:
       return res.status(200).json({ message: 'Registration successful!' });
+
     } catch (error) {
       console.error(error);
+      // Send a proper error response in case of failure
       return res.status(500).json({ message: 'Failed to register user. Please try again later.' });
     }
   } else {

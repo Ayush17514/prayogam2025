@@ -66,9 +66,29 @@ registrationForm.onsubmit = async function (e) {
   const username = document.getElementById("username").value;
   const email = document.getElementById("email").value;
 
+ registrationForm.onsubmit = async function (e) {
+  e.preventDefault(); // Prevent the default form submission behavior
+
+  const username = document.getElementById("username").value;
+  const email = document.getElementById("email").value;
+
+
+const responseText = await response.text();
+console.log("Raw Response:", responseText);
+
+// Check if the response body is empty before parsing
+let data = {};
+if (responseText) {
+  try {
+    data = JSON.parse(responseText); // Parse only if the response is not empty
+  } catch (error) {
+    console.error("Error parsing response:", error);
+  }
+}
+
   // Make a POST request to your serverless function for registration
   try {
-    const response = await fetch("/pages/api/register.js", {
+    const response = await fetch("/api/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -79,9 +99,12 @@ registrationForm.onsubmit = async function (e) {
       }),
     });
 
-    const data = await response.json();
-    console.log(response);
-    console.log(data);
+    // Log the raw response text
+    const responseText = await response.text();
+    console.log("Raw Response:", responseText);
+
+    // Try to parse the response text
+    const data = JSON.parse(responseText);
 
     if (response.ok) {
       alert("Registration successful!");
@@ -94,3 +117,4 @@ registrationForm.onsubmit = async function (e) {
     alert("An error occurred. Please try again.");
   }
 };
+ 
