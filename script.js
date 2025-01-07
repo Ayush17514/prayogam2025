@@ -88,7 +88,7 @@ if (responseText) {
 
   // Make a POST request to your serverless function for registration
   try {
-    const response = await fetch("/api/register", {
+    const response = await fetch("pages/api/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

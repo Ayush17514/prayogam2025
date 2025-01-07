@@ -1,5 +1,5 @@
 import Redis from 'ioredis';
-alert('hhhh');
+
 // Create a new Redis connection using environment variables
 const redis = new Redis({
   host: process.env.REDIS_HOST,    // Redis host (set this in Vercel environment variables)
