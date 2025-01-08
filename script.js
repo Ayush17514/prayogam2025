@@ -30,91 +30,20 @@ function updateCountdown() {
 const countdownInterval = setInterval(updateCountdown, 1000);
 
 //------------------------------------------------------------------------------------------------
+//registration
+ function openModal() {
+            document.getElementById('registrationModal').style.display = 'flex';
+        }
 
-// Get the modal
-const modal = document.getElementById("registrationModal");
+        // Close Modal
+        function closeModal() {
+            document.getElementById('registrationModal').style.display = 'none';
+        }
 
-// Get the button that opens the modal
-const openModalBtn = document.getElementById("openModalBtn");
-
-// Get the <span> element that closes the modal
-const closeModalBtn = document.getElementsByClassName("close-btn")[0];
-
-// When the user clicks the button, open the modal
-openModalBtn.onclick = function () {
-  modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-closeModalBtn.onclick = function () {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function (event) {
-  if (event.target === modal) {
-    modal.style.display = "none";
-  }
-}
-
-// Handle form submission (for example, send data to server or process it)
-const registrationForm = document.getElementById("registrationForm");
-
-registrationForm.onsubmit = async function (e) {
-  e.preventDefault(); // Prevent the default form submission behavior
-
-  const username = document.getElementById("username").value;
-  const email = document.getElementById("email").value;
-
- registrationForm.onsubmit = async function (e) {
-  e.preventDefault(); // Prevent the default form submission behavior
-
-  const username = document.getElementById("username").value;
-  const email = document.getElementById("email").value;
-
-
-const responseText = await response.text();
-console.log("Raw Response:", responseText);
-
-// Check if the response body is empty before parsing
-let data = {};
-if (responseText) {
-  try {
-    data = JSON.parse(responseText); // Parse only if the response is not empty
-  } catch (error) {
-    console.error("Error parsing response:", error);
-  }
-}
-
-  // Make a POST request to your serverless function for registration
-  try {
-    const response = await fetch("pages/api/register", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        username: username,
-        email: email,
-      }),
-    });
-
-    // Log the raw response text
-    const responseText = await response.text();
-    console.log("Raw Response:", responseText);
-
-    // Try to parse the response text
-    const data = JSON.parse(responseText);
-
-    if (response.ok) {
-      alert("Registration successful!");
-      modal.style.display = "none"; // Close the modal on success
-    } else {
-      alert("Error: " + data.message);
-    }
-  } catch (error) {
-    console.error("Error during registration:", error);
-    alert("An error occurred. Please try again.");
-  }
-};
- 
+        // Close modal when clicking outside the form
+        window.onclick = function(event) {
+            const modal = document.getElementById('registrationModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
