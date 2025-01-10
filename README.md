@@ -1,26 +1,29 @@
-link of the website : "https://prayogam2025.netlify.app"
+URL: "https://prayogam2025.jaincabs.in"
 
 
 Topic of the Project: 
 "Prayogam2025- University Tech Fest Website".
 
 Objective : 
--Create an official online presence for Prayogam2024 - Poornima University 
+-Create an official online presence for Prayogam2025 - Poornima University 
 -Display the tech fest's motive and objectives
 -Showcase previous year's gallery, winning projects, and statistics
 -Provide a user-friendly platform for participants to explore and get inspired
 -Enhance the event's reputation and attract more participants
+-allows college student to register for prayogam2025 online
 
 Scope : 
-Design and development of the frontend website.
+Design and development of the frontend as well as backend website.
 Responsive design for desktop, tablet, and mobile devices
 
 Features:
 -Motive and objectives of the tech fest
 -Gallery of previous year's tech fest
 -Winning projects and descriptions
--Statistics (number of participants, projects, etc.)
-- Winning projects and descriptions
+-countdown to the date of event 
+-supports event registration(database)
+-Winning projects and descriptions
+-Frequently ask question
 
 
 Technology stack:
@@ -28,6 +31,8 @@ Technology stack:
 - CSS3
 - JavaScript
 - Git as Version control system
+- SQL
+- PHP
 
 
 Conclusion: 
@@ -38,9 +43,9 @@ deliver a high-quality website that meets the university's standards and expecta
 and enhances the overall experience for participants and organizers alike.
 
 
-Name of Student: Ayush Agrawal				     Name of Guide
-Year \ Semester: 1st yr / 1st sem                     ( Mr. Abhishek Kumar Singh)
-Registration No.: 2024PUFCEBCEX17514                        (Ms.Megha Nain)
+Name of Student: Ayush Agrawal				               Name of Guide
+Year \ Semester: 1st yr / 1st sem & 2nd semester         ( Mr. Abhishek Kumar Singh)
+Registration No.: 2024PUFCEBCEX17514                      (Ms.Megha Nain)
                                                                                                  
 
 Details of Team Members: 1. Dishika Agarwal (reg. 17389)
