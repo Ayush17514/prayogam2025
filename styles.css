@@ -192,86 +192,123 @@ header {
 }
 
 
-/* Register Button */
- .register-btn {
-  display: inline-block;
-  background-color:#b99e2b; /* Button color */
-  color: #fff; /* Text color */
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  font-weight: 600;
-  border: none;
-  border-radius: 0.5rem;
-  margin-left: 70px;
-  width: 20%;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
+/* Styling for the Register Now button */
+.register-btn {
+    display: inline-block;
+    background-color: #b99e2b;
+    /* Button color */
+    color: #fff;
+    /* Text color */
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 0.5rem;
+    margin-left: 70px;
+    width: 20%;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
 }
 
 .register-btn:hover {
-  background-color: #c5b264; /* Hover color */
+    background-color: #c5b264;
+    /* Hover color */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Styling for the modal (popup) */
+/* Modal styling */
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 80%;
-  padding-top: 60px;
-}
-/* Modal content (the popup itself) */
-.modal-content {
-  background-color: #fff;
-  margin: 5% auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-  border-radius: 0.7rem;
-  max-width: 550px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-.close-btn {
-    float: right;
-    font-size: 20px;
-    cursor: pointer;
-    color: #555;
-}
-.close-btn:hover {
-    color: red;
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* Form Styling */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-height: 80vh;
+    /* Restrict height to 80% of the viewport */
+    overflow-y: auto;
+    /* Enable vertical scrolling for content */
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
 label {
     display: block;
-    margin-bottom: 5px;
+    margin-top: 10px;
     font-weight: bold;
 }
-input {
+
+input,
+select,
+button {
     width: 100%;
-    padding: 8px;
-    margin-bottom: 15px;
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.options button {
+    width: 48%;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
-button {
-    width: 100%;
-    padding: 10px;
-    background-color: #28a745;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+
+.options button:hover {
+    background-color: #f0f0f0;
 }
-button:hover {
-    background-color: #218838;
-}
-
-
-
 /* Responsive Design */
 @media (max-width: 768px) {
     .landing {
@@ -327,14 +364,29 @@ button:hover {
   transition: background-color 0.3s ease;
 }
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 50%;
-  padding-top: 60px;
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 60%;
+    padding-top: 60px;
+}
+
+/* Modal content (the popup itself) */
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 0.7rem;
+    max-width: 550px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -792,6 +844,76 @@ button:hover {
     }
 }
 
+
+
+.faq-container {
+    max-width: 60%;
+    margin: 20px auto;
+    margin-bottom: 30px;
+}
+.faq-container h2{
+    padding:20px;
+    text-align: center;
+}
+.faq {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 600;
+    position: relative;
+}
+
+
+.faq-answer {
+    display: none;
+    margin-top: 10px;
+    color: #777;
+}
+.icon {
+    font-size: 24px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.faq.open .faq-answer {
+    display: block;
+}
+
+.faq.open .icon {
+    transform: rotate(45deg);
+}
+
+
+/* Media query for mobile screens */
+@media (max-width: 768px) {
+  .faq-container {
+    padding: 0 5px;
+    max-width: 100%;
+  }
+
+  .faq-question {
+    font-size: 1rem;
+    padding: 0.6rem;
+  }
+
+  .faq-answer {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.6rem;
+  }
+
+  .faq-question i {
+    font-size: 1.2rem;
+  }
+}
 
 
 /* Footer Container */

@@ -31,19 +31,47 @@ const countdownInterval = setInterval(updateCountdown, 1000);
 
 //------------------------------------------------------------------------------------------------
 //registration
- function openModal() {
-            document.getElementById('registrationModal').style.display = 'flex';
-        }
+// Function to open the modal
+function openModal() {
+    document.getElementById('registrationModal').style.display = 'block';
+}
 
-        // Close Modal
-        function closeModal() {
-            document.getElementById('registrationModal').style.display = 'none';
-        }
+// Function to close the modal
+function closeModal() {
+    document.getElementById('registrationModal').style.display = 'none';
+    resetForms();
+}
 
-        // Close modal when clicking outside the form
-        window.onclick = function(event) {
-            const modal = document.getElementById('registrationModal');
-            if (event.target === modal) {
-                closeModal();
-            }
-        }
+// Function to show the Visitor form
+function showVisitorForm() {
+    document.getElementById('visitorForm').classList.remove('hidden');
+    document.getElementById('participantForm').classList.add('hidden');
+}
+
+// Function to show the Participant form
+function showParticipantForm() {
+    document.getElementById('participantForm').classList.remove('hidden');
+    document.getElementById('visitorForm').classList.add('hidden');
+}
+
+// Function to reset forms when closing the modal
+function resetForms() {
+    document.getElementById('visitorForm').classList.add('hidden');
+    document.getElementById('participantForm').classList.add('hidden');
+}
+
+// Close the modal when clicking outside of it
+window.onclick = function (event) {
+    const modal = document.getElementById('registrationModal');
+    if (event.target === modal) {
+        closeModal();
+    }
+};
+//------------------------------------------------------------------------------------------------
+//
+         document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const faq = question.parentElement;
+                faq.classList.toggle('open');
+            });
+        });

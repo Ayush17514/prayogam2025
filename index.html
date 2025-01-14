@@ -83,29 +83,79 @@
                 </div>
             </div>
 
-<!----------------------------------------------------------------------------------------------------><button class="register-btn" onclick="openModal()">Register Now</button>
-</div></section>
+<!---------------------------------------------------------------------------------------------------->
+<!-- Register Now Button -->
+    <button class="register-btn" onclick="openModal()">Register Now</button>
+
     <!-- Modal -->
     <div id="registrationModal" class="modal">
         <div class="modal-content">
             <span class="close-btn" onclick="closeModal()">&times;</span>
-            <form action="register.php" method="POST">
+            <p>Select your registration type</p>
+
+            <!-- Registration Options -->
+            <div class="options">
+                <button type="button" onclick="showVisitorForm()">Visitor</button>
+                <button type="button" onclick="showParticipantForm()">Participant</button>
+            </div>
+
+            <!-- Visitor Form -->
+            <form id="visitorForm" class="hidden" action="register.php" method="POST">
+                <input type="hidden" name="user_type" value="visitor">
+                
                 <label for="name">Full Name</label>
-                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                <input type="text" name="name" placeholder="Enter your full name" required>
 
                 <label for="branch">Branch</label>
-                <input type="text" id="branch" name="branch" placeholder="Enter your branch" required>
+                <input type="text" name="branch" placeholder="Enter your branch (BCA, BTech, MCA, MTech)" required>
 
                 <label for="registration_id">Registration Number</label>
-                <input type="text" id="registration_id" name="registration_id" placeholder="Enter your registration number" required>
+                <input type="text" name="registration_id" placeholder="Enter your registration number" required>
 
-                <label for="email">Email id</label>
-                <input type="text" id="email" name="email" placeholder="Enter your poornima email" required>
-                <button type="submit">Register</button>
+                <label for="email">Email ID</label>
+                <input type="email" name="email" placeholder="Enter your Poornima email" required>
+
+                <button type="submit">Register as Visitor</button>
+            </form>
+
+            <!-- Participant Form -->
+            <form id="participantForm" class="hidden" action="register.php" method="POST">
+                <input type="hidden" name="user_type" value="participant">
+                
+                <label for="name">Full Name</label>
+                <input type="text" name="name" placeholder="Enter your full name" required>
+
+                <label for="branch">Branch</label>
+                <input type="text" name="branch" placeholder="Enter your branch (BCA, BTech, MCA, MTech)" required>
+
+                <label for="registration_id">Registration Number</label>
+                <input type="text" name="registration_id" placeholder="Enter your registration number" required>
+
+                <label for="participant_course">Specialization</label>
+                <input type="text" name="participant_course" placeholder="Enter your specialization/course" required>
+
+                <label for="project_name">Project Name</label>
+                <input type="text" name="project_name" placeholder="Enter your project name" required>
+
+                <label for="project_type">Project Type</label>
+                <input type="text" name="project_type" placeholder="(Software / Hardware)" required>
+
+                <label for="project_url">Project URL</label>
+                <input type="url" name="project_url" placeholder="Enter the project URL" required>
+
+                <label for="project_domain">Project Domain</label>
+                <input type="text" name="project_domain" placeholder="Enter the project domain" required>
+
+                <label for="email">Email ID</label>
+                <input type="email" name="email" placeholder="Enter your Poornima email" required>
+
+                <button type="submit">Register as Participant</button>
             </form>
         </div>
     </div>
 
+</div>
+</section>
 <!---------------------------------------------------------------------------------------------------->
 <!--about the fest-->
 <section class="about-section" id="about">
@@ -274,7 +324,7 @@
         </div>
 
         <div class="team-card">
-            <img src="Ajay sir.JPG" alt="Member Image">
+            <img src="Ajay sir.jpg" alt="Member Image">
             <hr class="separator-line">
             <h3>Mr. Ajay Khunteta</h3>
             <p>Dean,FCE</p>
@@ -292,6 +342,75 @@
             <hr class="separator-line">
             <h3>Mrs. Gurvita Rai</h3>
             <p>Project Coordinator</p>
+        </div>
+
+    </div>
+</section>
+
+<!---------------------------------------------------------------------------------------------------->
+
+<section id="faq" class="faq-section" style="background-color: #f7f8fc;">
+    
+    <div class="faq-container">
+        <h2> Freqently Asked Questions</h2>
+        <div class="faq">
+            <div class="faq-question">
+                What is the event about?
+                <span class="icon">+</span>
+            </div>
+            <div class="faq-answer">
+                The event is a tech fest featuring workshops, hackathons, and guest speaker sessions.
+            </div>
+        </div>
+
+         <div class="faq">
+            <div class="faq-question">
+                Is there any registration fee?
+                <span class="icon">+</span>
+            </div>
+            <div class="faq-answer">
+                No, no nominal fee is required, but you should be the student of Poornima University to participate in.
+            </div>
+        </div>
+
+        <div class="faq">
+            <div class="faq-question">
+                How can I register for the event?
+                <span class="icon">+</span>
+            </div>
+            <div class="faq-answer">
+                You can register through our official event website under the "Home" page itself.
+            </div>
+        </div>
+
+        <div class="faq">
+            <div class="faq-question">
+                When and where will the event take place?
+                <span class="icon">+</span>
+            </div>
+            <div class="faq-answer">
+                The event will take place in 26 Feburary 2025 at Poornima University,jaipur.
+            </div>
+        </div>
+
+        <div class="faq">
+            <div class="faq-question">
+                Are there any charges to attend the event?
+                <span class="icon">+</span>
+            </div>
+            <div class="faq-answer">
+                No,Poornima University don't charge to attend the event .However you must have PU I-Card.
+            </div>
+        </div>
+
+        <div class="faq">
+            <div class="faq-question">
+                Will we be awarded a certificate of participation?
+                <span class="icon">+</span>
+            </div>
+            <div class="faq-answer">
+                Yes, all participants will receive a certificate of participation at the end of the event. The certificate will be issued digitally.
+            </div>
         </div>
 
     </div>
@@ -332,6 +451,6 @@
     </footer>
 </div>
 </section>
-        <script async src="script.js"></script>
+        <script src="script.js"></script>
     </body>
     </html>
