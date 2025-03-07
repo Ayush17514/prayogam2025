@@ -3,25 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Cache-control" content="public">
-    <title>Prayogam2025</title>
+    <title>Prayogam</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-
     <!-- Header Section -->
     <header>
         <!-- Logo -->
         <div class="logo">
-            <img src="Prayogamlogo.png">
+            <img src="eventlogo.png">
         </div>
 
         <!-- Desktop Navigation -->
         <nav class="navbar">
-            <a href="#home"style="background-color:#c5b264;">Home</a>
+            <a href="#home"style="background-color:#ff004f;">Home</a>
             <a href="#about">About</a>
             <a href="#speakers">Speakers</a>
             <a href="#gallery">Gallery</a>
@@ -50,40 +45,33 @@
 </header>
 
 <!---------------------------------------------------------------------------------------------------->
-<!-- Landing Page Section -->
-    <section id="home" class="landing">   
-        <div class="content">        
-            <h1>Prayogam 2025 </h1>
-            <h2>Science Expo</h2>
-
-             <!-- Event Date and Venue -->
-            <div class="event-info">
-                <p>Date: 26 February 2025</p>
-                <p>Venue: Poornima University Campus</p>
+<!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <img src="Poornima_University.png" >
+            <h1>Prayogam 2025</h1>
+            <h2><span class="highlight">Annual TechFest</span></h2>
+            <p>20th March, 2025</p>
+        </div>
+<!-- Countdown Timer -->
+        <div class="countdown">
+            <div class="count-item">
+                <span id="days">00</span>
+                <p>Days</p>
             </div>
-
-
-            <!-- Countdown Timer -->
-            <div class="countdown">
-                <div class="count-item">
-                    <span id="days">00</span>
-                    <p>Days</p>
-                </div>
-                <div class="count-item">
-                    <span id="hours">00</span>
-                    <p>Hours</p>
-                </div>
-                <div class="count-item">
-                    <span id="minutes">00</span>
-                    <p>Minutes</p>
-                </div>
-                <div class="count-item">
-                    <span id="seconds">00</span>
-                    <p>Seconds</p>
-                </div>
+            <div class="count-item">
+                <span id="hours">00</span>
+                <p>Hours</p>
             </div>
-
-<!---------------------------------------------------------------------------------------------------->
+            <div class="count-item">
+                <span id="minutes">00</span>
+                <p>Minutes</p>
+            </div>
+            <div class="count-item">
+                <span id="seconds">00</span>
+                <p>Seconds</p>
+            </div>
+        </div>
 <!-- Register Now Button -->
     <button class="register-btn" onclick="openModal()">Register Now</button>
 
@@ -156,6 +144,8 @@
 
 </div>
 </section>
+
+
 <!---------------------------------------------------------------------------------------------------->
 <!--about the fest-->
 <section class="about-section" id="about">
@@ -165,6 +155,7 @@
             The Faculty of Computer Science & Engineering, Poornima University (PU), Jaipur organized the Annual Technical Project Expo “Prayogam-2024” on the occasion of National Science Day. 
             The exhibition was intended to motivate students to apply the theoretical concepts in the form of projects. More than 1200 students participated in the exhibition and over 220 projects were displayed. Projects were focused on real world problems in the areas of AI, Data Science, Game Technology, IOT, Cyber Security, Web Technologies and Mobile applications.
         </p>
+        <a href="about-details.html" class="learn-more-btn">Learn More</a>
     </div>
     <div class="about-image">
         <img src="overview-prayogam-img.jpg" alt="image"> 
@@ -347,9 +338,9 @@
     </div>
 </section>
 
-<!---------------------------------------------------------------------------------------------------->
+<!----------------------------------------------------------------------------------------------------
 
-<section id="faq" class="faq-section" style="background-color: #f7f8fc;">
+<section id="faq" class="faq-section">
     
     <div class="faq-container">
         <h2> Freqently Asked Questions</h2>
@@ -415,7 +406,7 @@
 
     </div>
 </section>
- <!---------------------------------------------------------------------------------------------------->
+ ---------------------------------------------------------------------------------------------------->
 
  <!-- Footer Section -->
  <section id="contact">
@@ -451,6 +442,11 @@
     </footer>
 </div>
 </section>
-        <script src="script.js"></script>
-    </body>
-    </html>
+        <!-- Add this inside the <body> before closing tag -->
+<div id="particles-js"></div>
+
+<!-- Load Particles.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,31 +1,40 @@
 body {
-    font-family: "Montserrat", serif;
-    background-color: #fff;
-}
-
-body, html {
-    height: 100%;
-    width: 100%;
     margin: 0;
     padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #000;
+    color: white;
 }
 
-/* Header Styles */
+/* Navbar */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #fff;
-    color: #FFF; 
-    position:sticky;
+    padding: 15px 50px;
+    background-color: black;
+    position: fixed;
+    width: 100%;
     top: 0;
     z-index: 1000;
+}
+
+
+/* Particles */
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
 
 /* Logo Styling */
 .logo img {
     padding-left: 50px;
     width: 100px;
+    mix-blend-mode: screen;
 }
 
 /* Navigation Styles */
@@ -37,14 +46,14 @@ header {
 
 .navbar a {
     text-decoration: none;
-    color: #000;
+    color: #fff;
     font-size: 15px;
     padding: 8px 12px;
     transition: background-color 0.3s, color 0.3s;
     border-radius: 5px;
 }
 .navbar a:hover {
-    color:#000;
+    color:#ff004f;
 }
 /* Hamburger Menu (Mobile View) */
 .hamburger {
@@ -125,45 +134,43 @@ header {
     display: none;
 }
 
-
-
-/* Landing Page Styles */
-.landing {
-    background-image: url('header2.png'); /* Replace with your background image URL */
-    background-size: cover;
-    background-position: center;
+/* Hero Section */
+.hero {
     display: flex;
-    width: 100%;
     flex-direction: column;
-    height:100%;
-    position: relative;
-    
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    background: url('background.jpg') no-repeat center center/cover;
+    padding: 20px;
 }
 
-.content h1 {
-    font-size: 3.5rem;
-    text-align: left;
-    margin-left: 70px;
-    margin-top: 10%;
-    color: #fff;
+.hero-content h1 {
+    font-size: 70px;
+    font-weight: bold;
+    margin: 0;
 }
 
+.hero-content h2 {
+    font-size: 32px;
+    margin-top: 10px;
+}
+.hero-content img {
+    width: 200px;
+    mix-blend-mode: screen;
+}
 
-.content h2 {
-    font-size:20px;
-    text-align: left;
-    margin-left: 70px;
-    color: #b99e2b;
+.highlight {
+    color: #ffb700;
 }
 
 /* Countdown Timer Styles */
 .countdown {
     display: flex;
     gap: 20px;
-    justify-content:right;
-    margin-right: 70px;
-    margin-bottom: 20px;
-    color: #c5b264;;
+    justify-content:center;
+    color: #ff004f;
 }
 
 .count-item {
@@ -195,25 +202,18 @@ header {
 /* Styling for the Register Now button */
 .register-btn {
     display: inline-block;
-    background-color: #b99e2b;
-    /* Button color */
-    color: #fff;
-    /* Text color */
+    background-color: #ff6600;/* Button color */
+    color: #fff;/* Text color */
     padding: 0.75rem 1.5rem;
     font-size: 1rem;
     font-weight: 600;
     border: none;
+    margin-top: 40px;
     border-radius: 0.5rem;
-    margin-left: 70px;
     width: 20%;
+    cursor: pointer;
     text-decoration: none;
     transition: background-color 0.3s ease;
-}
-
-.register-btn:hover {
-    background-color: #c5b264;
-    /* Hover color */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Modal styling */
@@ -349,7 +349,7 @@ button[type="submit"]:hover {
 }
   .register-btn {
   display: inline-block;
-  background-color:#b99e2b; /* Button color */
+  background-color: #ff004f; /* Button color */
   color: #fff; /* Text color */
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
@@ -397,9 +397,6 @@ button[type="submit"]:hover {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 40px;
-    background-color:#f7f8fc; /* Light Gray Background */
-    color: #1E3A8A; /* Navy Blue Text */
     gap: 20px;
 }
 
@@ -411,14 +408,32 @@ button[type="submit"]:hover {
 .about-content h2 {
     font-size: 2.2rem;
     margin-bottom: 20px;
-    color:  #3e0e12;
+    color:  #ffb700;
 }
 
 .about-content p {
     font-size: 19px;
-    color: #333;
+    color: #8d8888;
     text-align: justify;
 }
+
+.learn-more-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 25px;
+    background-color: #ff6600;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.learn-more-btn:hover {
+    background-color: #ff004f;
+}
+
 
 .about-image {
     flex: 1;
@@ -430,6 +445,7 @@ button[type="submit"]:hover {
 .about-image img {
     width: 100%;
     max-width: 500px;
+    border-radius: 20px;
     height: auto;
 }
 
@@ -459,23 +475,18 @@ button[type="submit"]:hover {
 
 }
 
-
-
-
 /* Speaker Section Styles */
 .speaker-section {
-    padding: 10px 20px;
-    background-color: #f7f8fc;
-    color: #333;
     text-align: center;
 }
 
 .speaker-section h2{
     font-size: 2.2rem;
     margin-bottom: 20px;
-    color:  #3e0e12; /* purple*/
+    color: #ffb700; /* purple*/
 }
 .speaker-section p{
+    color: #8d8888;
     margin-left: 10%;
     margin-right: 10%;
     font-size: 19px;
@@ -570,15 +581,13 @@ button[type="submit"]:hover {
 /* Gallery Section Styles */
 .gallery-section {
     padding: 60px 20px;
-    background-color: #f7f8fc;
-    color: #333;
     text-align: center;
 }
 
 .gallery-section h2 {
     font-size: 2.2rem;
     margin-bottom: 20px;
-    color:  #3e0e12;
+    color:  #ffb700;
 }
 
 .gallery-container {
@@ -612,17 +621,16 @@ button[type="submit"]:hover {
 }
 
 .view-all-btn {
-    background-color:#3e0e12;
-    color: #fff;
-    padding: 15px 30px;
-    font-size: 0.8rem;
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 25px;
+    background-color: #ff6600;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
-}
-
-.view-all-btn:hover {
-    background-color: #72383d;
 }
 
 /* Responsive Design */
@@ -642,22 +650,20 @@ button[type="submit"]:hover {
 /* Projects Section Styles */
 .projects-section {
     padding: 60px 20px;
-    background-color: #f7f8fc;
     text-align: center;
-    color: #333;
 }
 
 .projects-section h2 {
     font-size: 2.2rem;
     margin-bottom: 20px;
-    color:  #3e0e12;
+    color:   #ffb700;
 }
 
 .projects-section p {
      margin-left: 10%;
     margin-right: 10%;
     font-size: 1.2rem;
-    color: #555;
+    color:#8d8888;
     margin-bottom: 40px;
 }
 
@@ -749,19 +755,18 @@ button[type="submit"]:hover {
 /* Team Section Styles */
 .team-section {
     padding: 60px 20px;
-    background-color:#f7f8fc;
     text-align: center;
 }
 
 .team-section h2 {
     font-size: 2.2rem;
     margin-bottom: 20px;
-    color:  #3e0e12;
+    color:  #ffb700;
 }
 
 .team-section p {
     font-size: 1.2rem;
-    color: #666;
+    color: #8d8888;
     margin-bottom: 30px;
 }
 
@@ -778,7 +783,6 @@ button[type="submit"]:hover {
 .team-card {
     background-color:#f7f8fc;
     border-radius: 10px;
-    box-shadow: 12px 6px 12px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -920,7 +924,6 @@ button[type="submit"]:hover {
 .footer {
     width: 100%;
     padding-top: 10px;
-    background-color: #121212; /* Dark theme background */
     color: #f0f0f0; /* Light text color for contrast */
 }
 /* Footer Content Layout */
@@ -953,7 +956,7 @@ button[type="submit"]:hover {
 
 /* Hover Effect for Links */
 .footer a:hover {
-    color: #c5b264; 
+    color:#ff004f; 
 }
 
 /* Social Media Icons */

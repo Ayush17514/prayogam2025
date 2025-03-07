@@ -1,3 +1,15 @@
+particlesJS("particles-js", {
+  particles: {
+    number: { value: 130, density: { enable: true, value_area: 700 } },
+    color: { value: "#C5C5C6" },
+    shape: { type: "circle" },
+    opacity: { value: 0.5, random: true },
+    size: { value: 3, random: true },
+    move: { enable: true, speed: 1, direction: "none" }
+  }
+});
+
+
 
 // Set the event date
 const eventDate = new Date('March 28, 2025 00:00:00').getTime();
