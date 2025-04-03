@@ -12,7 +12,7 @@ particlesJS("particles-js", {
 
 
 // Set the event date
-const eventDate = new Date('March 28, 2025 00:00:00').getTime();
+const eventDate = new Date('April 03, 2025 08:00:00').getTime();
 
 // Function to update the countdown
 function updateCountdown() {
@@ -34,7 +34,7 @@ function updateCountdown() {
     // Stop the countdown when the event date is reached
     if (timeLeft < 0) {
         clearInterval(countdownInterval);
-        document.querySelector('.countdown').innerText = "Event Started!";
+        document.querySelector('.countdown').innerText = "Event is live!";
     }
 }
 
@@ -80,10 +80,46 @@ window.onclick = function (event) {
     }
 };
 //------------------------------------------------------------------------------------------------
-//
+//evaluate
+
+function openModal(projectId) {
+    let frame = document.getElementById('evaluationFrame');
+    frame.src = 'evaluate_project.php?project_id=' + projectId;
+    document.getElementById('evaluationModal').style.display = 'flex';
+}
+
+
+//------------------------------------------------------------------------------------------------
+//faq section
          document.querySelectorAll('.faq-question').forEach(question => {
             question.addEventListener('click', () => {
                 const faq = question.parentElement;
                 faq.classList.toggle('open');
             });
         });
+
+//------------------------------------------------------------------------------------------------
+//menu icon
+   function toggleMenu() {
+    const menu = document.getElementById('mobileMenu');
+    const icon = document.querySelector('.hamburger');
+
+    // Toggle menu visibility
+    if (menu.style.display === 'block') {
+        menu.style.display = 'none';
+        icon.classList.remove('active'); // Reset animation
+    } else {
+        menu.style.display = 'block';
+        icon.classList.add('active'); // Apply animation
+    }
+}
+// Close menu when a link is clicked
+document.addEventListener("DOMContentLoaded", function () {
+    const menuLinks = document.querySelectorAll("#mobileMenu a");
+    menuLinks.forEach(link => {
+        link.addEventListener("click", function () {
+            document.getElementById("mobileMenu").classList.remove("active");
+        });
+    });
+});
+

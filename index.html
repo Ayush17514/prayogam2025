@@ -18,30 +18,38 @@
         <nav class="navbar">
             <a href="#home"style="background-color:#ff004f;">Home</a>
             <a href="#about">About</a>
-            <a href="#speakers">Speakers</a>
             <a href="#gallery">Gallery</a>
             <a href="#projects">Projects</a>
+            <a href="#team">Our Team</a>
             <a href="#contact">Contact</a>
+            <a href="login.php" class="admin-login-btn">Admin Login</a>
         </nav>
 
-       <!-- Hamburger Menu Icon (Checkbox Toggle) -->
-<input type="checkbox" id="menu-toggle" class="menu-toggle">
-<label for="menu-toggle" class="hamburger">
+       <!-- Hamburger Menu Icon -->
+<div class="hamburger" onclick="toggleMenu()">
     <div></div>
     <div></div>
     <div></div>
-</label>
+</div>
 
-<!-- Mobile Navigation Menu -->
-   <nav class="mobile-nav">
-    <a href="#home" class="nav-link">Home</a>
-    <a href="#about" class="nav-link">About</a>
-    <a href="#speakers" class="nav-link">Speakers</a>
-    <a href="#team" class="nav-link">Team Members</a>
-    <a href="#gallery" class="nav-link">Gallery</a>
-    <a href="#projects" class="nav-link">Projects</a>
-    <a href="#contact" class="nav-link">Contact</a>
-   </nav>
+   <!-- Mobile Navigation Menu -->
+<nav class="mobile-nav" id="mobileMenu">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#projects">Projects</a>
+    <a href="#team">Our Team</a>
+    <a href="#contact">Contact</a>
+    <a href="login.php"style:"color:pink;">Admin Login</a>
+</nav>
+
+<!-- JavaScript for Menu Toggle -->
+<script>
+    function toggleMenu() {
+    const menu = document.getElementById("mobileMenu");
+    menu.classList.toggle("active");
+}
+</script>
 </header>
 
 <!---------------------------------------------------------------------------------------------------->
@@ -51,7 +59,7 @@
             <img src="Poornima_University.png" >
             <h1>Prayogam 2025</h1>
             <h2><span class="highlight">Annual TechFest</span></h2>
-            <p>20th March, 2025</p>
+            <p>03 & 04 April, 2025</p>
         </div>
 <!-- Countdown Timer -->
         <div class="countdown">
@@ -73,7 +81,7 @@
             </div>
         </div>
 <!-- Register Now Button -->
-    <button class="register-btn" onclick="openModal()">Register Now</button>
+    <button class="register-btn" onclick="openModal()">Registration closed</button>
 
     <!-- Modal -->
     <div id="registrationModal" class="modal">
@@ -155,76 +163,121 @@
             The Faculty of Computer Science & Engineering, Poornima University (PU), Jaipur organized the Annual Technical Project Expo “Prayogam-2024” on the occasion of National Science Day. 
             The exhibition was intended to motivate students to apply the theoretical concepts in the form of projects. More than 1200 students participated in the exhibition and over 220 projects were displayed. Projects were focused on real world problems in the areas of AI, Data Science, Game Technology, IOT, Cyber Security, Web Technologies and Mobile applications.
         </p>
-        <a href="about-details.html" class="learn-more-btn">Learn More</a>
+        <a href="about.html" class="learn-more-btn">Learn More</a>
     </div>
     <div class="about-image">
         <img src="overview-prayogam-img.jpg" alt="image"> 
     </div>
 </section>
 <!---------------------------------------------------------------------------------------------------->
- <!-- Speaker Section -->
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<!-- Speaker Section -->
 <section class="speaker-section" id="speakers">
-    <h2>Our Esteemed Speakers</h2>
-    <p>"Our esteemed speakers are renowned industry leaders, innovators, and experts from diverse fields. They bring a wealth of knowledge, insights, and experience to inspire, educate, and empower our audience. Their contributions will ignite meaningful conversations and spark innovative ideas."</p>
+    <h2>Our Esteemed Mentors</h2>
+    <p>"Our esteemed Mentors are renowned industry leaders, innovators, and experts from diverse fields. They bring a
+        wealth of knowledge, insights, and experience to inspire, educate, and empower our audience. Their contributions
+        will ignite meaningful conversations and spark innovative ideas."</p>
+
     <div class="speaker-container">
         <!-- Speaker Card 1 -->
         <div class="speaker-card">
             <div class="speaker-image">
-                <img src="coming soon.png" alt="Speaker 1">
+                <img src="chiefguest.jpe" alt="Chief Guest">
             </div>
             <div class="speaker-info">
-                <h3></h3>
-                <p></p>
-                <span></span>
+                <h3>Mr. Vibhashit S.</h3>
+                <p>Chief Guest</p>
+                <span>Director-IT(CISO),MTX Group</span>
             </div>
         </div>
 
         <!-- Speaker Card 2 -->
         <div class="speaker-card">
             <div class="speaker-image">
-                 <img src="coming soon.png" alt="Speaker 2">
+                <img src="https://media.licdn.com/dms/image/v2/D4D03AQGInJrVQTbdKg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1691255356246?e=2147483647&v=beta&t=0TiDjbijK7BL1DfQZV5rdmUTCIShwftxZG1fcrkkBoY" alt="Speaker 2">
             </div>
             <div class="speaker-info">
-                <h3></h3>
-                <p></p>
-                <span></span>
+                <h3>Mr. shankar Morwal</h3>
+                <p>Guest of Honor</p>
+                <span>Founder & CTO, Habilelabs</span>
             </div>
         </div>
 
         <!-- Speaker Card 3 -->
         <div class="speaker-card">
             <div class="speaker-image">
-                 <img src="coming soon.png" alt="Speaker 3">
+                <img src="guest2.jpe" alt="Speaker 3">
             </div>
             <div class="speaker-info">
-                <h3></h3>
-                <p></p>
-                <span></span>
+                <h3>Mr. Uma Shankar Arora</h3>
+                <p>Guest of Honor</p>
+                <span>Co-Founder,SevenX</span>
             </div>
         </div>
 
         <!-- Speaker Card 4 -->
         <div class="speaker-card">
             <div class="speaker-image">
-                 <img src="coming soon.png" alt="Speaker 4">
+                <img src="https://media.licdn.com/dms/image/v2/C4D03AQHlIQr-94MK3g/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1653929184435?e=2147483647&v=beta&t=0Z_L_jMzpDR-xRONjVUTv294NHYB2BqaTsW5xgfY4TU" alt="Speaker 4">
             </div>
             <div class="speaker-info">
-                <h3></h3>
-                <p></p>
-                <span></span>
+                <h3>Ms. Noopur Saini</h3>
+                <p>Guest of Honor</p>
+                <span>Assistant Manager-HR,A3Logics India Pvt. Ltd.</span>
             </div>
         </div>
     </div>
 </section>
-
 <!---------------------------------------------------------------------------------------------------->
 <!-- Gallery Section -->
-<section class="gallery-section" id="gallery">
+<section class="gallery-section" id="gallery" style="">
     <h2>Event Gallery</h2>
     <div class="gallery-container">
         <!-- Image Cards -->
         <div class="gallery-item">
-            <img src="https://res.cloudinary.com/dbyqeneej/image/upload/v1733136556/IMG_7538_1_jthchl.jpg" alt="Gallery Image 1">
+            <img src="https://res.cloudinary.com/dbyqeneej/image/upload/v1742394593/IMG_7687_wlvkbw.jpg" alt="Gallery Image 1">
         </div>
         <div class="gallery-item">
             <img src="https://res.cloudinary.com/dbyqeneej/image/upload/v1733136940/IMG_7546_k8ucsz.jpg" alt="Gallery Image 2">
@@ -236,17 +289,17 @@
             <img src="https://res.cloudinary.com/dbyqeneej/image/upload/v1733136942/IMG_7577_h7ntbq.jpg" alt="Gallery Image 4">
         </div>
         <div class="gallery-item">
-            <img src="https://res.cloudinary.com/dbyqeneej/image/upload/v1733136943/IMG_7707_ydrui3.jpg" alt="Gallery Image 5">
+            <img src="https://res.cloudinary.com/dbyqeneej/image/upload/v1742394043/edtwvswncieinslqfe0h.jpg" alt="Gallery Image 5">
         </div>
         <div class="gallery-item">
-            <img src="https://res.cloudinary.com/dbyqeneej/image/upload/v1733136945/IMG_7691_r7g71n.jpg" alt="Gallery Image 6">
+            <img src="https://res.cloudinary.com/dbyqeneej/image/upload/v1742394644/IMG_7750_nannsi.jpg" alt="Gallery Image 6">
         </div>
         
     </div>
 
     <!-- View All Button -->
     <div class="view-all-container">
-        <a href="https://drive.google.com/drive/folders/15FKND-DzhwJoX1DGAb4c-PZy1GBzxqXm?usp=sharing" class="view-all-btn">View All Images</a>
+        <a href="https://drive.google.com/drive/folders/13rBsOA3kH_yPP8ksqb3Gt7kY9t_sVVPW?usp=drive_link" class="view-all-btn">View All Images</a>
     </div>
 </section>
 
@@ -262,7 +315,7 @@
         <div class="project-year">
             <h3>Prayogam 2023</h3>
             <p>Discover the groundbreaking projects presented in 2023.</p>
-            <a href="FCE-2024-25.pdf" class="project-link" download>
+            <a href="Prayogam2023 list.xlsx" class="project-link" download>
                 <span class="pdf-icon">📄</span> Download PDF of 2023 Projects
             </a>
         </div>
@@ -271,7 +324,7 @@
         <div class="project-year">
             <h3>Prayogam 2024</h3>
             <p>Explore the innovative projects submitted by students in 2024.</p>
-            <a href="FCE-2024-25.pdf" class="project-link" download>
+            <a href="Prayogam 2024 list.xlsx" class="project-link" download>
                 <span class="pdf-icon">📄</span> Download PDF of 2024 Projects
             </a>
         </div>
@@ -302,34 +355,56 @@
             <p>President<br>Poornima University</p>
         </div>
         <div class="team-card">
-            <img src="manoj sir.jpg" alt="Member Image">
+            <img src="manoj gupta.jpeg" alt="Member Image">
             <hr class="separator-line">
             <h3>Dr. Manoj Gupta</h3>
             <p>Pro-President<br>Poornima University</p>
-        </div>
-        <div class="team-card">
-            <img src="pratish sir.JPG" alt="Coordinator Image">
-            <hr class="separator-line">
-            <h3>Mr. Pratish Rawat</h3>
-            <p>HoD<br>Department of first Year FET & FCE </p>
         </div>
 
         <div class="team-card">
             <img src="Ajay sir.jpg" alt="Member Image">
             <hr class="separator-line">
             <h3>Mr. Ajay Khunteta</h3>
-            <p>Dean,FCE</p>
+            <p>Dean<br>Department of FCE</p>
         </div>
 
         <div class="team-card">
-            <img src="megha mam.jpg" alt="Member Image">
+            <img src="Dr. Ankush Kumar Jain.png" alt="Member Image">
+            <hr class="separator-line">
+            <h3>Dr. Ankush Kumar Jain</h3>
+            <p>Dean<br>Department of FET</p>
+        </div>
+
+        <div class="team-card">
+            <img src="pratish sir.JPG" alt="Coordinator Image">
+            <hr class="separator-line">
+            <h3>Mr. Pratish Rawat</h3>
+            <p>HoD<br>Department of BTech First Year</p>
+        </div>
+
+        <div class="team-card">
+            <img src="Dr. Vishnu Sharma.jpeg" alt="Member Image">
+            <hr class="separator-line">
+            <h3>Dr. Vishnu Sharma</h3>
+            <p>HoD<br>Master of Computer Applications</p>
+        </div>
+
+        <div class="team-card">
+            <img src="deepika photo  _1_.JPG" alt="Member Image">
+            <hr class="separator-line">
+            <h3>Dr. Deepika Saxena</h3>
+            <p>HoD<br>Bachelor of Computer Applications</p>
+        </div>
+
+        <div class="team-card">
+            <img src="megha nain.jpeg" alt="Member Image">
             <hr class="separator-line">
             <h3>Mrs. Megha Nain</h3>
             <p>Project Coordinator</p>
         </div>
 
         <div class="team-card">
-            <img src="gurvita mam.jpeg" alt="Member Image">
+            <img src="gurvita rai.jpg" alt="Member Image">
             <hr class="separator-line">
             <h3>Mrs. Gurvita Rai</h3>
             <p>Project Coordinator</p>
@@ -338,6 +413,45 @@
     </div>
 </section>
 
+
+<section id="sponsors" class="sponsors-section">
+    <h2>Our Industry Partners</h2>
+    <div class="sponsors-container">
+        <div class="sponsor"style="padding-top: 30px;">
+            <a href="https://tierajasthan.org/"target="_blank"><img src="https://bsmedia.business-standard.com/_media/bs/img/article/2023-07/22/full/20230722181743.jpg" alt="Sponsor 1"></a>
+        </div>
+        <div class="sponsor">
+            <a href="https://lms.istart.rajasthan.gov.in/ssologin.php" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFSE0haTirbjtejRQ5LIq0x4azTBRU52vIqA&s" alt="Sponsor 2"></a>
+        </div>
+        <div class="sponsor">
+            <a href="https://www.damcogroup.com/" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSABQ8hkhqJyl65heXV2MLrGD9A49r18uRoxF4CaJGVB1Al83DcUOIAEQjbn_MOk-eagZk&usqp=CAU" alt="Sponsor 3"></a>
+        </div>
+        <div class="sponsor">
+            <a href="https://bminfotrade.com/" target="_blank"><img src="https://media.licdn.com/dms/image/v2/C4E0BAQE_gTbRiKCUew/company-logo_200_200/company-logo_200_200/0/1650101770896/bminfotrade_logo?e=2147483647&v=beta&t=e6JtGZ0-467L2TYGe9mNms43cP4CYF5dvFAYLsHyiJU" alt="Sponsor 4"></a>
+        </div>
+        <div class="sponsor">
+            <a href="https://www.strivemindz.com/" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkoweZFoj7A0_3u65gAeW_gh9_54V-sr1SzA&s" alt="Sponsor 5">
+        </div>
+        <div class="sponsor">
+            <a href="https://externlabs.com/" target="_blank"><img src="https://media.licdn.com/dms/image/v2/D4E0BAQE7LKa_9ucNdg/company-logo_200_200/company-logo_200_200/0/1689060768188/extern_labs_logo?e=2147483647&v=beta&t=NfKXqyeI2ihOLetNwRGAVuKd6D0mBg5hsL08JWhRwgU" alt="Sponsor 6"></a>
+        </div>
+        <div class="sponsor">
+            <a href="https://www.saaskart.co/" target="_blank"><img src="https://media.licdn.com/dms/image/v2/D560BAQFUua3mFqyEmA/company-logo_200_200/company-logo_200_200/0/1708762303358/saaskart_logo?e=2147483647&v=beta&t=EUcVW0-61Ot-_IEwzh-al6rPb9ZJcsf-KO9OoOQ_vTA" alt="Sponsor 7"></a>
+        </div>
+        <div class="sponsor">
+            <a href="https://grras.com/" target="_blank"><img src="https://media.licdn.com/dms/image/v2/C560BAQE6Wr-ANDL2SQ/company-logo_200_200/company-logo_200_200/0/1630659591446/grras_solutions_p_ltd_logo?e=2147483647&v=beta&t=vx7z_ZnAi3Fri8a5Le-D7aJeun1-XWY_8Kq8aAFZvLM" alt="Sponsor 8"></a>
+        </div>
+        <div class="sponsor" style="padding-top: 40px;">
+            <a href="https://ingenuitygaming.com/" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToNuYnEhiHbWqLrTr0pt_H7sE4u5ekNW909g&s" alt="Sponsor 9"></a>
+        </div>
+        <div class="sponsor">
+            <a href="https://igbc.in/" target="_blank"><img src="https://indiacoolingcoalition.org/wp-content/uploads/2020/12/IGBC-logo-medium.png" alt="Sponsor 10"></a>
+        </div>
+        <div class="sponsor">
+            <a href="https://www.ashrae.org/" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWbUshpr7AyQJXHNerY3yPZdhN9rdmZ2nVAw&ss" alt="Sponsor 11"></a>
+        </div>
+    </div>
+</section>
 <!----------------------------------------------------------------------------------------------------
 
 <section id="faq" class="faq-section">
@@ -420,7 +534,7 @@
             <h4>Quick Links</h4>
             <p><a href="#home">Home</a></p>
             <p><a href="#about">About</a></p>
-            <p><a href="#speakers">Speakers</a></p>
+            <p><a href="#speakers">mentors</a></p>
             <p><a href="#team">Team Members</a></p>
             <p><a href="#gallery">Gallery</a></p>
             <p><a href="#projects">Projects</a></p>
