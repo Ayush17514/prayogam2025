@@ -1,4 +1,5 @@
-link of the website : "https://prayogam2025.netlify.app"
+link of the website : "https://prayogam2025.jaincabs.in"
+Linkdin profile : "www.linkedin.com/in/ayush-agrawal-2b23a5330"
 
 
 Topic of the Project: 
@@ -27,6 +28,7 @@ Technology stack:
 - HTML5
 - CSS3
 - JavaScript
+- PHP
 - Git as Version control system
 
 
@@ -38,14 +40,11 @@ deliver a high-quality website that meets the university's standards and expecta
 and enhances the overall experience for participants and organizers alike.
 
 
-Name of Student: Ayush Agrawal				     Name of Guide
-Year \ Semester: 1st yr / 1st sem                     ( Mr. Abhishek Kumar Singh)
-Registration No.: 2024PUFCEBCEX17514                        (Ms.Megha Nain)
-                                                                                                 
+Name: Ayush Agrawal
+Year:1st yr 
+Semester:1st sem                
 
-Details of Team Members: 1. Dishika Agarwal (reg. 17389)
-                         2. Avani Mittal (reg. 17080)
-                         3. Gaurav Prajapati (reg. 17315)
+    
 
 
 
